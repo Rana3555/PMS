@@ -10,27 +10,22 @@ import { SideDialogComponent } from '../side-dialog/side-dialog.component';
 })
 export class DashboardComponent {
   properties: any[] = [];
-  payment: any[] = [];
+  currency: any[] = [];
 
   constructor(private dialog: MatDialog, private http: HttpClient) {}
 
   ngOnInit() {
     this.loadProperties();
-    this.currency();
   }
 
   loadProperties() {
-    this.http.get<any[]>('./assets/Json/dashboard-properties.json').subscribe((data) => {
-      this.properties = data;
-    });
-  }
-  currency() {
-    this.http.get<any[]>('./assets/Json/dashboard-payment.json').subscribe((data) => {
-      this.payment = data;
+    this.http.get<any>('./assets/Json/dashboard-properties.json').subscribe((data) => {
+      this.properties = data.statusOptions;
+      this.currency = data.currency;
     });
   }
 
-  usrDialog(propertyId: number) {
+  userDialog(propertyId: number) {
     const property = this.properties.find(p => p.id === propertyId);
     if (property) {
       const dialogRef = this.dialog.open(SideDialogComponent, {
@@ -43,10 +38,9 @@ export class DashboardComponent {
           name: property.name
         },
       });
-      dialogRef.afterClosed().subscribe((res) => {
+      dialogRef.afterClosed().subscribe((res:any) => {
         // Handle dialog close event
       });
     }
   }
-
 }

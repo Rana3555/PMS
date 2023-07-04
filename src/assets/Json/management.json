@@ -1,0 +1,123 @@
+{
+  "statusOptions": [
+    {
+      "id": 1,
+      "value": "Status",
+      "label": "Status"
+    },
+    {
+      "id": 2,
+      "value": "html",
+      "label": "HTML"
+    },
+    {
+      "id": 3,
+      "value": "css",
+      "label": "CSS"
+    },
+    {
+      "id": 4,
+      "value": "php",
+      "label": "PHP"
+    },
+    {
+      "id": 5,
+      "value": "js",
+      "label": "JavaScript"
+    }
+  ],
+  "propertyTypeOptions": [
+    {
+      "id": 1,
+      "value": "Property type",
+      "label": "Property type"
+    },
+    {
+      "id": 2,
+      "value": "html",
+      "label": "HTML"
+    },
+    {
+      "id": 3,
+      "value": "css",
+      "label": "CSS"
+    },
+    {
+      "id": 4,
+      "value": "php",
+      "label": "PHP"
+    },
+    {
+      "id": 5,
+      "value": "js",
+      "label": "JavaScript"
+    }
+  ],
+  "management": [
+    {
+      "id": 1,
+      "name": "Property Name",
+      "Address": "Address",
+      "Location": "4517 Washington Ave. Manchester, Kentucky 39495",
+      "imagePath": "../../assets/house-imgs (1).png",
+      "Status": "Current Status",
+      "Occupied": "Occupied",
+      "rent": "Rent :",
+      "price": "$1200/month",
+      "lease": "Lease End Date :",
+      "date": "May 12,2019"
+    },
+    {
+      "id": 2,
+      "name": "Property Name",
+      "Address": "Address",
+      "Location": "4517 Washington Ave. Manchester, Kentucky 39495",
+      "imagePath": "../../assets/house-imgs (6).png",
+      "Status": "Current Status",
+      "Occupied": "Occupied",
+      "rent": "Rent :",
+      "price": "$1200/month",
+      "lease": "Lease End Date :",
+      "date": "May 12,2019"
+    },
+    {
+      "id": 3,
+      "name": "Property Name",
+      "Address": "Address",
+      "Location": "4517 Washington Ave. Manchester, Kentucky 39495",
+      "imagePath": "../../assets/house-imgs (7).png",
+      "Status": "Current Status",
+      "Occupied": "Occupied",
+      "rent": "Rent :",
+      "price": "$1200/month",
+      "lease": "Lease End Date :",
+      "date": "May 12,2019"
+    },
+    {
+      "id": 4,
+      "name": "Property Name",
+      "Address": "Address",
+      "Location": "4517 Washington Ave. Manchester, Kentucky 39495",
+      "imagePath": "../../assets/house-imgs (8).png",
+      "Status": "Current Status",
+      "Occupied": "Occupied",
+      "rent": "Rent :",
+      "price": "$1200/month",
+      "lease": "Lease End Date :",
+      "date": "May 12,2019"
+    },
+    {
+      "id": 5,
+      "name": "Property Name",
+      "Address": "Address",
+      "Location": "4517 Washington Ave. Manchester, Kentucky 39495",
+      "imagePath": "../../assets/house-imgs (9).png",
+      "Status": "Current Status",
+      "Occupied": "Occupied",
+      "rent": "Rent :",
+      "price": "$1200/month",
+      "lease": "Lease End Date :",
+      "date": "May 12,2019"
+    }
+  ]
+}

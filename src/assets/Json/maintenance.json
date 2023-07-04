@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Cracked tile in the bathroom",
+    "current":"Priority Level",
+    "High": "High",
+    "imagePath": "../../assets/house-imgs (1).png",
+    "Status":"Status",
+    "Assigned":"Staff Assigned",
+    "Details":"Staff Details",
+    "Location":"Gut Hawjins"
+  },
+  {
+    "id": 2,
+    "name": "Cracked tile in the bathroom",
+    "current":"Priority Level",
+    "High": "High",
+    "imagePath":"../../assets/house-imgs (6).png",
+     "Status":"Status",
+    "Assigned":"Staff Assigned",
+    "Details":"Staff Details",
+    "Location":"Gut Hawjins"
+  },
+  {
+    "id": 3,
+    "name": "Cracked tile in the bathroom",
+    "current":"Priority Level",
+    "High": "High",
+    "imagePath": "../../assets/house-imgs (7).png",
+     "Status":"Status",
+    "Assigned":"Staff Assigned",
+    "Details":"Staff Details",
+    "Location":"Gut Hawjins"
+  },
+  {
+    "id": 4,
+    "name": "Cracked tile in the bathroom",
+    "current":"Priority Level",
+    "High": "High",
+    "imagePath":"../../assets/house-imgs (8).png",
+     "Status":"Status",
+    "Assigned":"Staff Assigned",
+    "Details":"Staff Details",
+    "Location":"Gut Hawjins"
+  },
+  {
+    "id": 5,
+    "name": "Cracked tile in the bathroom",
+    "current":"Priority Level",
+    "High": "High",
+    "imagePath":"../../assets/house-imgs (9).png",
+     "Status":"Status",
+    "Assigned":"Staff Assigned",
+    "Details":"Staff Details",
+    "Location":"Gut Hawjins"
+  }
+]

@@ -1,53 +1,48 @@
-<div class="dialog-container">
-  <div class="containe">
-    <div class="row">
-      <div class="navbar-image">
-        <img [src]="data?.imagePath" alt="Selected Property Image">
+<nav class="navbar navbar-expand-sm  navbar-light"  >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../../assets/logo-propsmart.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link mx-4" aria-current="page" routerLink="">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/property-management">Property Management</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/tenants">Tenants</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/maintenance">Maintenance</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/financial">Financial</a>
+        </li>
+      </ul>
+
+      <div class="nav-link">
+        <a href=""><img src="../../assets/search.png" alt=""></a>
       </div>
-      <div class="navbar-name">
-        <h3>{{ data?.name }}</h3>
+      <div class="nav-link">
+        <a href=""><img src="../../assets/notification logo.png" alt=""></a>
       </div>
-      <div class="navbar-address">
-        <h3>Address:</h3>
-        <p>4517 Washington Ave. Manchester, Kentucky 39495</p>
-      </div>
-      <div class="navbar-status">
-        <h3>Current Status</h3>
-        <span>Occupied</span>
-      </div>
-      <div class="col-md-6">
-        <div class="navbar-rent">
-          <h3>Rent:</h3>
-          <span>$-1200/-</span>
+      <div class="nav-link">
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../../assets/profile-signIn.png" alt="">
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">forget password</a></li>
+            <li><a class="dropdown-item" href="#">Sign-out</a></li>
+          </ul>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="navbar-outstanding">
-          <h3>Outstanding Payment</h3>
-          <span>Nill</span>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="navbar-tenant">
-          <h3>Tenant Details:</h3>
-          <span>Kathryn Murphy</span>
-          <span>tanya.hill@example.com</span>
-          <span>(225) 555-0118</span>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="navbar-lease">
-          <h3>Lease Details:</h3>
-          <span>August 9, 2023 - August 8, 2025</span>
-        </div>
-      </div>
-      <div class="navbar-maintenance">
-        <h3>Maintenance Request:</h3>
-        <span>Nill</span>
-      </div>
-    </div>
-    <div class="button">
-      <button type="button" class="btn btn-primary btn-lg btn-block">close</button>
+
     </div>
   </div>
-</div>
+</nav>

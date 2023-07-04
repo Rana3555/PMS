@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./maintenance.component.scss']
 })
 export class MaintenanceComponent {
+  maintain: any;
+
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    this.maintenance();
+  }
+
+  maintenance() {
+    this.http.get<any[]>('./assets/Json/maintenance.json').subscribe((data) => {
+      this.maintain = data;
+    });
+  }
 
 }

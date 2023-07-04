@@ -1,160 +1,45 @@
-<nav class="navbar navbar-expand-sm  navbar-light bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="../../assets/logo-propsmart.png" alt=""></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link mx-4" aria-current="page" routerLink="">Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" routerLink="/property-management">Property Management</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" routerLink="/tenants">Tenants</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" routerLink="/maintenance">Maintenance</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" routerLink="/financial">Financial</a>
-            </li>
-          </ul>
-        
-        <div class="nav-link">
-            <a href=""><img src="../../assets/search.png" alt=""></a>
+<div class="bg-dark">
+  <app-navbar></app-navbar>
+</div>
+<div class="container-fluid p-5">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="d-flex">
+        <p>Filter as: </p>
+        <div class="mx-3">
+          <select>
+            <option value="Status">Status</option>
+            <option *ngFor="let option of filterOptions.statusOptions" [value]="option.value">{{ option.label }}</option>
+          </select>
         </div>
-        <div class="nav-link">
-            <a href=""><img src="../../assets/notification logo.png" alt=""></a>
+        <div class="mx-3">
+          <select>
+            <option value="Property type">Property type</option>
+            <option *ngFor="let option of filterOptions.propertyTypeOptions" [value]="option.value">{{ option.label }}</option>
+          </select>
         </div>
-        <div class="nav-link">
-            <div class="dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="../../assets/profile-signIn.png" alt="">
-                  </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">forget password</a></li>
-                  <li><a class="dropdown-item" href="#">Sign-out</a></li>
-                </ul>
-              </div>
-        </div>
-   
       </div>
     </div>
-  </nav>
-  <div class="container-fluid p-5">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="d-flex">
-                <p>Filter as: </p>
-                <div class="mx-3">
-                    <select>
-                        <option value="Status">Status</option>
-                        <option value="html">HTML</option>
-                        <option value="css">CSS</option>
-                        <option value="php">PHP</option>
-                        <option value="js">JavaScript</option>
-                      </select>
-                </div>
-                <div class="mx-3">
-                    <select>
-                        <option value="Property-type">Property type</option>
-                        <option value="html">HTML</option>
-                        <option value="css">CSS</option>
-                        <option value="php">PHP</option>
-                        <option value="js">JavaScript</option>
-                      </select>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 text-end">
-            <button type="button" class="add-propert-btn">Add Property</button>
-        </div>
-    </div>
-    <div class="row my-3">
-        <div class="col">
-            <div class="card" style="width: 250px;">
-                <img src="../../assets/house-imgs (1).png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-title">Property Name</p>
-                  <p class="card-title">Address</p>
-                  <span>4517 Washington Ave. Manchester, Kentucky 39495</span>
-                  <p class="card-title">Current Status</p>
-                  <p class="card-text"> Occupied</p>
-                  <p class="card-title">Rent :</p>
-                  <span> $1200/month</span>
-                  <p class="card-title">Lease End Date :</p>
-                  <span> May 12,2019</span>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 250px;">
-                <img src="../../assets/house-imgs (6).png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-title">Property Name</p>
-                  <p class="card-title">Address</p>
-                  <span>4517 Washington Ave. Manchester, Kentucky 39495</span>
-                  <p class="card-title">Current Status</p>
-                  <p class="card-text"> Occupied</p>
-                  <p class="card-title">Rent :</p>
-                  <span> $1200/month</span>
-                  <p class="card-title">Lease End Date :</p>
-                  <span> May 12,2019</span>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 250px;">
-                <img src="../../assets/house-imgs (7).png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-title">Property Name</p>
-                  <p class="card-title">Address</p>
-                  <span>4517 Washington Ave. Manchester, Kentucky 39495</span>
-                  <p class="card-title">Current Status</p>
-                  <p class="card-text"> Occupied</p>
-                  <p class="card-title">Rent :</p>
-                  <span> $1200/month</span>
-                  <p class="card-title">Lease End Date :</p>
-                  <span> May 12,2019</span>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 250px;">
-                <img src="../../assets/house-imgs (8).png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-title">Property Name</p>
-                  <p class="card-title">Address</p>
-                  <span>4517 Washington Ave. Manchester, Kentucky 39495</span>
-                  <p class="card-title">Current Status</p>
-                  <p class="card-text"> Occupied</p>
-                  <p class="card-title">Rent :</p>
-                  <span> $1200/month</span>
-                  <p class="card-title">Lease End Date :</p>
-                  <span> May 12,2019</span>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 250px;">
-                <img src="../../assets/house-imgs (9).png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-title">Property Name</p>
-                  <p class="card-title">Address</p>
-                  <span>4517 Washington Ave. Manchester, Kentucky 39495</span>
-                  <p class="card-title">Current Status</p>
-                  <p class="card-text"> Occupied</p>
-                  <p class="card-title">Rent :</p>
-                  <span> $1200/month</span>
-                  <p class="card-title">Lease End Date :</p>
-                  <span> May 12,2019</span>
-                </div>
-            </div>
-        </div>
+    <div class="col-md-6 text-end">
+      <button type="button" class="add-propert-btn">Add Property</button>
     </div>
   </div>
+  <div class="row my-3">
+    <div class="col" *ngFor="let management of property">
+      <div class="card" style="width: 250px;">
+        <img [src]="management.imagePath" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-title">{{ management.name }}</p>
+          <p class="card-title">{{ management.address }}</p>
+          <span>{{ management.location }}</span>
+          <p class="card-title">{{ management.status }}</p>
+          <p class="card-text">{{ management.occupied }}</p>
+          <p class="card-title">{{ management.rent }}</p>
+          <span>{{ management.price }}</span>
+          <p class="card-title">{{ management.lease }}</p>
+          <span>{{ management.date }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
