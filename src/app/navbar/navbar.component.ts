@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Inject } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-navbar',
@@ -8,5 +6,5 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
+
 }

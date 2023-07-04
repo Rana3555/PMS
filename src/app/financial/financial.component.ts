@@ -42,7 +42,7 @@ export class FinancialComponent {
   }
 
   financial() {
-    this.http.get<any[]>('./assets/Json/financial-table.json').subscribe((data:any) => {
+    this.http.get<any[]>('./assets/Json/financial-table.json').subscribe((data) => {
       this.finance = data;
     });
   }
