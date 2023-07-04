@@ -5,13 +5,15 @@ import { PropertyManagementComponent } from './property-management/property-mana
 import { TenantsComponent } from './tenants/tenants.component';
 import { FinancialComponent } from './financial/financial.component';
 import { MaintenanceComponent } from './maintenance/maintenance.component';
+import { AddPropertyComponent } from './add-property/add-property.component';
 
 const routes: Routes = [
   { path: '', component:DashboardComponent },
   { path: 'property-management',component:PropertyManagementComponent },
   { path: 'tenants',component:TenantsComponent },
   { path: 'financial',component:FinancialComponent },
-  { path: 'maintenance', component:MaintenanceComponent }
+  { path: 'maintenance', component:MaintenanceComponent },
+  { path: 'add-property', component:AddPropertyComponent }
   
 ];
 

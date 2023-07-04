@@ -15,6 +15,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { FinancialComponent } from './financial/financial.component';
 import { SideDialogComponent } from './side-dialog/side-dialog.component';
+import { AddPropertyComponent } from './add-property/add-property.component';
+import {MatChipInputEvent, MatChipsModule} from '@angular/material/chips';
+import {FormControl, FormGroup, FormGroupDirective, NgForm, Validators, FormBuilder} from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +31,9 @@ import { SideDialogComponent } from './side-dialog/side-dialog.component';
     MaintenanceComponent,
     FinancialComponent,
     NavbarComponent,
-    SideDialogComponent
+    SideDialogComponent,
+    AddPropertyComponent,
+ 
   ],
   imports: [
     BrowserModule,
@@ -35,7 +43,11 @@ import { SideDialogComponent } from './side-dialog/side-dialog.component';
     HttpClientModule,
     MatButtonModule,
     MatDialogModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatChipsModule,
+    MatIconModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

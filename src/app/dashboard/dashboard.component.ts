@@ -43,7 +43,7 @@ export class DashboardComponent {
           name: property.name
         },
       });
-      dialogRef.afterClosed().subscribe((res) => {
+      dialogRef.afterClosed().subscribe((res:any) => {
         // Handle dialog close event
       });
     }
