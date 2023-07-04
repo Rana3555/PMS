@@ -10,23 +10,18 @@ import { SideDialogComponent } from '../side-dialog/side-dialog.component';
 })
 export class DashboardComponent {
   properties: any[] = [];
-  payment: any[] = [];
+  currency: any[] = [];
 
   constructor(private dialog: MatDialog, private http: HttpClient) {}
 
   ngOnInit() {
     this.loadProperties();
-    this.currency();
   }
 
   loadProperties() {
-    this.http.get<any[]>('./assets/Json/dashboard-properties.json').subscribe((data) => {
-      this.properties = data;
-    });
-  }
-  currency() {
-    this.http.get<any[]>('./assets/Json/dashboard-payment.json').subscribe((data) => {
-      this.payment = data;
+    this.http.get<any>('./assets/Json/dashboard-properties.json').subscribe((data) => {
+      this.properties = data.statusOptions;
+      this.currency = data.currency;
     });
   }
 
@@ -48,5 +43,4 @@ export class DashboardComponent {
       });
     }
   }
-
 }

@@ -1,37 +1,66 @@
-[
-  {
-    "id": 1,
-    "name": "Property Name",
-    "current":"Current Status:",
-    "status": "Occupied",
-    "imagePath": "../../assets/house-imgs (1).png"
-  },
-  {
-    "id": 2,
-    "name": "Property Name",
-    "current":"Current Status:",
-    "status": "Occupied",
-    "imagePath": "../../assets/house-imgs (2).png"
-  },
-  {
-    "id": 3,
-    "name": "Property Name",
-    "current":"Current Status:",
-    "status": "Occupied",
-    "imagePath": "../../assets/house-imgs (3).png"
-  },
-  {
-    "id": 4,
-    "name": "Property Name",
-    "current":"Current Status:",
-    "status": "Occupied",
-    "imagePath":"../../assets/house-imgs (4).png"
-  },
-  {
-    "id": 5,
-    "name": "Property Name",
-    "current":"Current Status:",
-    "status": "Occupied",
-    "imagePath":"../../assets/house-imgs (1).png"
-  }
-]
+{
+    "statusOptions": [
+    {
+      "id": 1,
+      "name": "Property Name",
+      "current": "Current Status:",
+      "status": "Occupied",
+      "imagePath": "../../assets/house-imgs (1).png"
+    },
+    {
+      "id": 2,
+      "name": "Property Name",
+      "current": "Current Status:",
+      "status": "Occupied",
+      "imagePath": "../../assets/house-imgs (2).png"
+    },
+    {
+      "id": 3,
+      "name": "Property Name",
+      "current": "Current Status:",
+      "status": "Occupied",
+      "imagePath": "../../assets/house-imgs (3).png"
+    },
+    {
+      "id": 4,
+      "name": "Property Name",
+      "current": "Current Status:",
+      "status": "Occupied",
+      "imagePath": "../../assets/house-imgs (4).png"
+    },
+    {
+      "id": 5,
+      "name": "Property Name",
+      "current": "Current Status:",
+      "status": "Occupied",
+      "imagePath": "../../assets/house-imgs (1).png"
+    }
+  ],
+    "currency": [
+    {
+      "id": 1,
+      "name": "Total Income",
+      "currency": "$-20,000"
+    },
+    {
+      "id": 2,
+      "name": "Outstanding payment",
+      "currency": "$-5000"
+    },
+    {
+      "id": 3,
+      "name": "No.of Properties",
+      "currency": "$-20"
+    },
+    {
+      "id": 4,
+      "name": "Total no.of Tenants",
+      "currency": "$-20"
+    },
+    {
+      "id": 5,
+      "name": "Maintenance Request",
+      "currency": "10"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Guy Hawkins",
+    "Contact": "Contact:",
+    "mail": "tanya.hill@example.com(225)555-011",
+    "Lease": "Lease Details:",
+    "date": "August 9,2023 - August 8,2025",
+    "Payment": "Outstanding Payment",
+    "time": "August 9,2023 - August 8,2025",
+    "imagePath": "../../assets/Frame.png"
+  },
+  {
+    "id": 2,
+    "name": "Guy Hawkins",
+    "Contact": "Contact:",
+    "mail": "tanya.hill@example.com(225)555-011",
+    "Lease": "Lease Details:",
+    "date": "August 9,2023 - August 8,2025",
+    "Payment": "Outstanding Payment",
+    "time": "August 9,2023 - August 8,2025",
+    "imagePath": "../../assets/Frame.png"
+  },
+  {
+    "id": 3,
+    "name": "Guy Hawkins",
+    "Contact": "Contact:",
+    "mail": "tanya.hill@example.com(225)555-011",
+    "Lease": "Lease Details:",
+    "date": "August 9,2023 - August 8,2025",
+    "Payment": "Outstanding Payment",
+    "time": "August 9,2023 - August 8,2025",
+    "imagePath": "../../assets/Frame.png"
+  },
+  {
+    "id": 4,
+    "name": "Guy Hawkins",
+    "Contact": "Contact:",
+    "mail": "tanya.hill@example.com(225)555-011",
+    "Lease": "Lease Details:",
+    "date": "August 9,2023 - August 8,2025",
+    "Payment": "Outstanding Payment",
+    "time": "August 9,2023 - August 8,2025",
+    "imagePath": "../../assets/Frame.png"
+  },
+  {
+    "id": 5,
+    "name": "Guy Hawkins",
+    "Contact": "Contact:",
+    "mail": "tanya.hill@example.com(225)555-011",
+    "Lease": "Lease Details:",
+    "date": "August 9,2023 - August 8,2025",
+    "Payment": "Outstanding Payment",
+    "time": "August 9,2023 - August 8,2025",
+    "imagePath": "../../assets/Frame.png"
+  }
+]

@@ -1,36 +1,39 @@
 .banner {
-    height:100vh;
-    min-height:500px;
-    background-size:cover;
-    background-image:url('../../assets/main-banner-img.png');
+  height: 100vh;
+  min-height: 500px;
+  background-size: cover;
+  background-image: url('../../assets/main-banner-img.png');
 }
 
 .hidden-spacer {
-    height: 56px;
+  height: 56px;
 }
 
+.main-heading {
+  font-size: 54px;
+  font-weight: 700;
+  color: #FFF;
+}
 
-.main-heading{
-    font-size: 54px;
-    font-weight: 700;
-    color: #FFF;
+.sub-heading {
+  font-size: 24px;
+  font-weight: 400;
+  color: #FFF;
 }
-.sub-heading{
-    font-size: 24px;
-    font-weight: 400;
-    color: #FFF;
+
+.number-text {
+  font-size: 40px;
+  font-weight: 700;
+  color: #FFF;
 }
-.number-text{
-    font-size: 40px;
-    font-weight: 700;
-    color: #FFF;
+
+.card-title {
+  font-size: 16px;
+  font-weight: 500;
 }
-.card-title{
-    font-size: 16px;
-    font-weight: 500;
-}
-.card-text{
-    font-size: 16px;
-    font-weight: 500;
-    color: #FF0000;
+
+.card-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #FF0000;
 }
