@@ -1,53 +1,94 @@
-<div class="dialog-container">
+<div class="dialog-container p-3">
   <div class="container">
     <div class="row">
-      <div class="navbar-image">
+      <div class="navbar-image p-3">
         <img [src]="data?.imagePath" class="img-size w-100" alt="Selected Property Image">
       </div>
-      <div class="navbar-name">
-        <h3>{{ data?.name }}</h3>
+      <hr style="height:2px;border-width:0;color:#0c0b0b;background-color:#030303">
+      <div class="navbar-name mb-3">
+        <h5>{{ data?.name }}</h5>
       </div>
-      <div class="navbar-address">
-        <h3>Address:</h3>
-        <p>4517 Washington Ave. Manchester, Kentucky 39495</p>
+      <div class="nav-address">
+        <h5>Address:</h5>
+        <p class="text-name">4517 Washington Ave. Manchester, Kentucky 39495</p>
       </div>
-      <div class="navbar-status">
-        <h3>Current Status</h3>
-        <span>Occupied</span>
+      <div class="status mb-3">
+        <h5>Current Status:</h5>
+        <p class="card-text"> Occupied</p>
       </div>
-      <div class="col-md-6">
-        <div class="navbar-rent">
-          <h3>Rent:</h3>
-          <span>$-1200/-</span>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <h5>Rent:</h5>
+          <span class="text-name">$-1200/-</span>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="navbar-outstanding">
-          <h3>Outstanding Payment</h3>
+        <div class="col-md-6">
+          <h5>Outstanding Payment</h5>
           <span>Nill</span>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="navbar-tenant">
-          <h3>Tenant Details:</h3>
-          <span>Kathryn Murphy</span>
-          <span>tanya.hill@example.com</span>
-          <span>(225) 555-0118</span>
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <h5>Tenant Details:</h5>
+          <span>Kathryn Murphy tanya.hill@example.com (225) 555-0118</span>
+        </div>
+        <div class="col-md-6">
+          <h5>Lease Details:</h5>
+          <span >August 9, 2023 - August 8, 2025</span>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="navbar-lease">
-          <h3>Lease Details:</h3>
-          <span>August 9, 2023 - August 8, 2025</span>
-        </div>
-      </div>
-      <div class="navbar-maintenance">
-        <h3>Maintenance Request:</h3>
+      <div class="navbar-maintenance ">
+        <h5>Maintenance Request:</h5>
         <span>Nill</span>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <button type="button" class="add-propert-btn" mat-button mat-dialog-close>close</button>
+    </div>
+      <!-- <div class="navbar-address">
+        <p class="card-title">Address:</p>
+        <p class="text-name">4517 Washington Ave. Manchester, Kentucky 39495</p>
+      </div>
+      <div class="navbar-status mb-3">
+        <p class="card-title">Current Status</p>
+        <span class="text-name">Occupied</span>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <div class="navbar-rent">
+            <p class="card-title">Rent:</p>
+            <span class="text-name">$-1200/-</span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="navbar-outstanding">
+            <p class="card-title">Outstanding Payment</p>
+            <span class="text-name">Nill</span>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <div class="navbar-tenant">
+            <p class="card-title">Tenant Details:</p>
+            <span class="text-name">Kathryn Murphy</span>
+            <span class="text-name">tanya.hill@example.com</span>
+            <span class="text-name">(225) 555-0118</span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="navbar-lease">
+            <p class="card-title">Lease Details:</p>
+            <span class="text-name">Aug 9, 2023 - Aug 8, 2025</span>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-maintenance mb-3">
+        <p class="card-title">Maintenance Request:</p>
+        <span class="text-name">Nill</span>
       </div>
     </div>
     <div class="button">
       <button type="button" class="btn btn-primary btn-lg btn-block"  mat-button mat-dialog-close>close</button>
-    </div>
+    </div> -->
   </div>
 </div>

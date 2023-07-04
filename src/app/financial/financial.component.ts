@@ -22,12 +22,6 @@ export interface PeriodicElement {
 //   {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
 // ];
 
-
-
-/**
- * @title Basic use of `<table mat-table>`
- */
-
 @Component({
   selector: 'app-financial',
   templateUrl: './financial.component.html',

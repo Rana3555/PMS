@@ -20,17 +20,17 @@ export class DashboardComponent {
   }
 
   loadProperties() {
-    this.http.get<any[]>('./assets/Json/dashboard-properties.json').subscribe((data) => {
+    this.http.get<any[]>('./assets/Json/dashboard-properties.json').subscribe((data:any) => {
       this.properties = data;
     });
   }
   currency() {
-    this.http.get<any[]>('./assets/Json/dashboard-payment.json').subscribe((data) => {
+    this.http.get<any[]>('./assets/Json/dashboard-payment.json').subscribe((data:any) => {
       this.payment = data;
     });
   }
 
-  usrDialog(propertyId: number) {
+  userDialog(propertyId: number) {
     const property = this.properties.find(p => p.id === propertyId);
     if (property) {
       const dialogRef = this.dialog.open(SideDialogComponent, {
