@@ -25,7 +25,7 @@ export class DashboardComponent {
     });
   }
 
-  usrDialog(propertyId: number) {
+  userDialog(propertyId: number) {
     const property = this.properties.find(p => p.id === propertyId);
     if (property) {
       const dialogRef = this.dialog.open(SideDialogComponent, {
@@ -38,7 +38,7 @@ export class DashboardComponent {
           name: property.name
         },
       });
-      dialogRef.afterClosed().subscribe((res) => {
+      dialogRef.afterClosed().subscribe((res:any) => {
         // Handle dialog close event
       });
     }

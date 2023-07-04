@@ -16,6 +16,12 @@ import { FinancialComponent } from './financial/financial.component';
 import { SideDialogComponent } from './side-dialog/side-dialog.component';
 import { NgxPermissionsModule } from 'ngx-permissions';
 import { CommonModule } from '@angular/common';
+import { AddPropertyComponent } from './add-property/add-property.component';
+import {MatChipInputEvent, MatChipsModule} from '@angular/material/chips';
+import {FormControl, FormGroup, FormGroupDirective, NgForm, Validators, FormBuilder} from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +32,9 @@ import { CommonModule } from '@angular/common';
     MaintenanceComponent,
     FinancialComponent,
     NavbarComponent,
-    SideDialogComponent
+    SideDialogComponent,
+    AddPropertyComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -38,7 +46,11 @@ import { CommonModule } from '@angular/common';
     MatDialogModule,
     MatTableModule,
     NgxPermissionsModule.forRoot(),
-    CommonModule
+    CommonModule,
+    MatFormFieldModule,
+    MatChipsModule,
+    MatIconModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
