@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Property Name",
+    "current":"Current Status:",
+    "status": "Occupied",
+    "imagePath": "../../assets/house-imgs (1).png"
+  },
+  {
+    "id": 2,
+    "name": "Property Name",
+    "current":"Current Status:",
+    "status": "Occupied",
+    "imagePath": "../../assets/house-imgs (2).png"
+  },
+  {
+    "id": 3,
+    "name": "Property Name",
+    "current":"Current Status:",
+    "status": "Occupied",
+    "imagePath": "../../assets/house-imgs (3).png"
+  },
+  {
+    "id": 4,
+    "name": "Property Name",
+    "current":"Current Status:",
+    "status": "Occupied",
+    "imagePath":"../../assets/house-imgs (4).png"
+  },
+  {
+    "id": 5,
+    "name": "Property Name",
+    "current":"Current Status:",
+    "status": "Occupied",
+    "imagePath":"../../assets/house-imgs (1).png"
+  }
+]

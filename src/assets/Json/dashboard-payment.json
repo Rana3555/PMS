@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Total Income",
+    "currency":"$-20,000"
+  },
+  {
+    "id": 2,
+    "name": "Outstanding payment",
+      "currency":"$-5000"
+  },
+  {
+    "id": 3,
+    "name": "No.of Properties",
+      "currency":"$-20"
+  },
+  {
+    "id": 4,
+    "name": "Total no.of Tenants",
+      "currency":"$-20"
+  },
+  {
+    "id": 5,
+    "name": "Maintenance Request",
+    "currency":"10"
+  }
+]

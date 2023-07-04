@@ -1,0 +1,53 @@
+<div class="dialog-container">
+  <div class="container">
+    <div class="row">
+      <div class="navbar-image">
+        <img [src]="data?.imagePath" class="img-size w-100" alt="Selected Property Image">
+      </div>
+      <div class="navbar-name">
+        <h3>{{ data?.name }}</h3>
+      </div>
+      <div class="navbar-address">
+        <h3>Address:</h3>
+        <p>4517 Washington Ave. Manchester, Kentucky 39495</p>
+      </div>
+      <div class="navbar-status">
+        <h3>Current Status</h3>
+        <span>Occupied</span>
+      </div>
+      <div class="col-md-6">
+        <div class="navbar-rent">
+          <h3>Rent:</h3>
+          <span>$-1200/-</span>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="navbar-outstanding">
+          <h3>Outstanding Payment</h3>
+          <span>Nill</span>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="navbar-tenant">
+          <h3>Tenant Details:</h3>
+          <span>Kathryn Murphy</span>
+          <span>tanya.hill@example.com</span>
+          <span>(225) 555-0118</span>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="navbar-lease">
+          <h3>Lease Details:</h3>
+          <span>August 9, 2023 - August 8, 2025</span>
+        </div>
+      </div>
+      <div class="navbar-maintenance">
+        <h3>Maintenance Request:</h3>
+        <span>Nill</span>
+      </div>
+    </div>
+    <div class="button">
+      <button type="button" class="btn btn-primary btn-lg btn-block"  mat-button mat-dialog-close>close</button>
+    </div>
+  </div>
+</div>
