@@ -22,7 +22,7 @@
 .image-body {
   border: 1px solid;
   border-radius: 5px;
-  height: 500px;
+  height: 550px;
   width: 100%;
 }
 
@@ -52,6 +52,34 @@
   height: 350px;
 }
 
+.add-btn {
+  border-radius: 5px;
+  height: 90px;
+  width: 90px;
+  border-style: dotted;
+}
+
+.add {
+  font-size: 30px;
+}
+
+// .profile-image {
+//   display: inline-block;
+//   cursor: pointer;
+// }
+
+// .profile-image img {
+//   width: 150px;
+//   height: 150px;
+//   border-radius: 100%;
+// }
+
+// .profile-image {
+//   width: 18px;
+//   height: 18px;
+//   float: right;
+//   margin-top: -16px;
+// }
 .chip-list {
   width: 100%;
   border: 1px solid #ced4da;

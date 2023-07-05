@@ -3,7 +3,7 @@
     <h3 class="head-text">Tenants</h3>
     <div class="row my-3">
         <div class="col" *ngFor="let tenants of tenant">
-            <div class="card" style="width: 250px;">
+            <div class="card" style="width: 250px;"  (click)="userDialog(tenants.id)">
                 <img [src]="tenants.imagePath" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-title">{{ tenants.name }}</p>

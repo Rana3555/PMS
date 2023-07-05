@@ -23,6 +23,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import {NgFor} from '@angular/common';
 
+import { MaintanceDialogComponent } from './maintance-dialog/maintance-dialog.component';
+import { PropertyDialogComponent } from './property-dialog/property-dialog.component';
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import {NgFor} from '@angular/common';
     NavbarComponent,
     SideDialogComponent,
     AddPropertyComponent,
+    MaintanceDialogComponent,
+    PropertyDialogComponent,
 
   ],
   imports: [

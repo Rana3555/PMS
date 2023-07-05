@@ -1,51 +1,4 @@
-<nav class="navbar navbar-expand-sm  navbar-light bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="../../assets/logo-propsmart.png" alt=""></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link mx-4" aria-current="page" routerLink="">Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/property-management">Property Management</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/tenants">Tenants</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/maintenance">Maintenance</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/financial">Financial</a>
-        </li>
-      </ul>
-      <div class="nav-link">
-        <a href=""><img src="../../assets/search.png" alt=""></a>
-      </div>
-      <div class="nav-link">
-        <a href=""><img src="../../assets/notification logo.png" alt=""></a>
-      </div>
-      <div class="nav-link">
-        <div class="dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="../../assets/profile-signIn.png" alt="">
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">forget password</a></li>
-            <li><a class="dropdown-item" href="#">Sign-out</a></li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</nav>
-
+<div class="bg-dark"><app-navbar></app-navbar></div>
 <!-- Add Property -->
 <div class="container-fluid p-5">
   <a href="" class="text-name">Property Management / Add Property</a>
@@ -113,7 +66,23 @@
     <div class="col-md-6">
       <div class="card-body box shadow image-body">
         <div class="p-5">
-          <img src="../../assets/house-imgs (7).png" class="image-card" alt="">
+          <!-- <img src="../../assets/house-imgs (7).png" class="image-card" alt=""> -->
+          <!-- <img [src]="url" class="image-card">
+                        <div class="choose-file">
+                        <input class="upload-img"  type="file" (change)="onSelectFile($event)" >
+                        </div> -->
+
+          <label class="image-card">
+            <img [src]="url" class="image-card">
+
+            <!-- <img class="edit-icon" src="../assets/images/edit-icon.svg"> -->
+            <input type="file" id="fileInput" (change)="onSelectFile($event)" style="display: none;">
+          </label>
+          <div class="my-3" style="text-align: center ;">
+            <button type="file" class="add-btn"><span class="add">+</span></button>
+          </div>
+
+
         </div>
       </div>
     </div>
@@ -135,7 +104,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 my-4">
       <div class="text-center">
         <button type="button" class="cancel-btn mx-4">cancel</button>
         <button type="button" class="add-propert-btn">Add</button>
@@ -143,3 +112,4 @@
     </div>
   </div>
 </div>
+

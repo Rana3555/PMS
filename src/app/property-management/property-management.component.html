@@ -7,26 +7,26 @@
       <div class="d-flex">
         <p>Filter as: </p>
         <div class="mx-3">
-          <select>
+          <select class="sel-option">
             <option value="Status">Status</option>
             <option *ngFor="let option of filterOptions.statusOptions" [value]="option.value">{{ option.label }}</option>
           </select>
         </div>
         <div class="mx-3">
-          <select>
+          <select class="sel-option">
             <option value="Property type">Property type</option>
             <option *ngFor="let option of filterOptions.propertyTypeOptions" [value]="option.value">{{ option.label }}</option>
           </select>
         </div>
       </div>
     </div>
-    <div class="col-md-6 text-end">
+    <div class="col-md-6 text-end mb-3">
       <button type="button" class="add-propert-btn" routerLink="/add-property">Add Property</button>
     </div>
   </div>
   <div class="row my-3">
     <div class="col" *ngFor="let management of property">
-      <div class="card" style="width: 250px;">
+      <div class="card" style="width: 250px;" (click)="userDialog(management.id)">
         <img [src]="management.imagePath" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-title">{{ management.name }}</p>
