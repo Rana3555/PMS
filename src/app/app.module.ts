@@ -21,6 +21,8 @@ import {MatChipInputEvent, MatChipsModule} from '@angular/material/chips';
 import {FormControl, FormGroup, FormGroupDirective, NgForm, Validators, FormBuilder} from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import {NgFor} from '@angular/common';
+
 
 
 @NgModule({
@@ -50,6 +52,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatFormFieldModule,
     MatChipsModule,
     MatIconModule,
+    NgFor
 
   ],
   providers: [],
