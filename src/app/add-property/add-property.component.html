@@ -114,7 +114,23 @@
             <div class="col-md-6">
                 <div class="card-body box shadow image-body">
                     <div class="p-5">
-                        <img src="../../assets/house-imgs (7).png" class="image-card" alt="">
+                        <!-- <img src="../../assets/house-imgs (7).png" class="image-card" alt=""> -->
+                        <!-- <img [src]="url" class="image-card">
+                        <div class="choose-file">
+                        <input class="upload-img"  type="file" (change)="onSelectFile($event)" >
+                        </div> -->
+                        
+                        <label  class="image-card">
+                          <img [src]="url" class="image-card">
+
+                          <!-- <img class="edit-icon" src="../assets/images/edit-icon.svg"> -->
+                          <input type="file" id="fileInput" (change)="onSelectFile($event)" style="display: none;">
+                         </label>
+                          <div class="my-3" style="text-align: center ;">
+                            <button type="file" class="add-btn"><span class="add">+</span></button>
+                          </div>
+                       
+
                     </div>
                 </div>
             </div>
@@ -124,7 +140,7 @@
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 my-4">
         <div class="text-center">
             <button type="button" class="cancel-btn mx-4">cancel</button>
             <button type="button" class="add-propert-btn">Add</button>

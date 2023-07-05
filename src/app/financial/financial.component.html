@@ -2,12 +2,31 @@
 <div class="container-fluid">
     <div class="container">
         <div class="text-center">
-            <h3 class="head-text my-2">Financial</h3>
+            <h3 class="my-3">Financial</h3>
+            <div class="text-name">
+              <div class="col">
+                <div class="head-text">
+                  <p class="card-title">Total Income</p>
+                  <span class="dollar-amount">$-20,000</span>
+                </div>
+              </div>
+              <div class="col">
+                <div class="head-text">
+                  <p class="card-title">Outstanding payment</p>
+                  <span class="dollar-amount">$-5000</span>
+                </div>
+              </div>
+            </div>
         </div>
+        <div class="d-flex" style="justify-content: space-between;">
+          <p class="table-title">Transactions</p>
+          <p class="table-title ">Jun 01,2023 - Jun 05,2023</p>
+        </div>
+    
         <div class="main-index">
-          <table mat-table [dataSource]="finance" class="mat-elevation-z8">
+          <table mat-table [dataSource]="finance" class="mat-elevation-z8" >
             <!-- Position Column -->
-            <ng-container matColumnDef="position">
+            <ng-container matColumnDef="position" >
               <th mat-header-cell *matHeaderCellDef> Date </th>
               <td mat-cell *matCellDef="let element"> {{element.position}} </td>
             </ng-container>
@@ -26,10 +45,9 @@
 
             <!-- Symbol Column -->
             <ng-container matColumnDef="symbol">
-              <th mat-header-cell *matHeaderCellDef> Credit/Debit </th>
-              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+              <th mat-header-cell *matHeaderCellDef > Credit/Debit </th>
+              <td mat-cell *matCellDef="let element" class="payment-data"> {{element.symbol}} </td>
             </ng-container>
-
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
           </table>

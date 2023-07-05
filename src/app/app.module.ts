@@ -21,6 +21,8 @@ import {MatChipInputEvent, MatChipsModule} from '@angular/material/chips';
 import {FormControl, FormGroup, FormGroupDirective, NgForm, Validators, FormBuilder} from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MaintanceDialogComponent } from './maintance-dialog/maintance-dialog.component';
+import { PropertyDialogComponent } from './property-dialog/property-dialog.component';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { MatIconModule } from '@angular/material/icon';
     NavbarComponent,
     SideDialogComponent,
     AddPropertyComponent,
+    MaintanceDialogComponent,
+    PropertyDialogComponent,
 
   ],
   imports: [
