@@ -4,7 +4,7 @@
     <h3 class="head-text">Maintenance</h3>
     <div class="row my-3">
       <div class="col" *ngFor="let maintenance of maintain">
-        <div class="card" style="width: 250px;">
+        <div class="card" style="width: 250px;"  (click)="userDialog(maintenance.id)">
             <img [src]="maintenance.imagePath" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-title">{{ maintenance.name }}</p>

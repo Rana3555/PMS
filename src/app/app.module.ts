@@ -14,13 +14,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { FinancialComponent } from './financial/financial.component';
 import { SideDialogComponent } from './side-dialog/side-dialog.component';
-import { NgxPermissionsModule } from 'ngx-permissions';
+// import { NgxPermissionsModule } from 'ngx-permissions';
 import { CommonModule } from '@angular/common';
 import { AddPropertyComponent } from './add-property/add-property.component';
 import {MatChipInputEvent, MatChipsModule} from '@angular/material/chips';
 import {FormControl, FormGroup, FormGroupDirective, NgForm, Validators, FormBuilder} from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import {NgFor} from '@angular/common';
+
+import { MaintanceDialogComponent } from './maintance-dialog/maintance-dialog.component';
+import { PropertyDialogComponent } from './property-dialog/property-dialog.component';
 
 
 @NgModule({
@@ -34,6 +38,8 @@ import { MatIconModule } from '@angular/material/icon';
     NavbarComponent,
     SideDialogComponent,
     AddPropertyComponent,
+    MaintanceDialogComponent,
+    PropertyDialogComponent,
 
   ],
   imports: [
@@ -45,11 +51,12 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatDialogModule,
     MatTableModule,
-    NgxPermissionsModule.forRoot(),
+    // NgxPermissionsModule.forRoot(),
     CommonModule,
     MatFormFieldModule,
     MatChipsModule,
     MatIconModule,
+    NgFor
 
   ],
   providers: [],

@@ -7,6 +7,7 @@ export interface PeriodicElement {
   position: number;
   weight: number;
   symbol: string;
+  imgicon: any;
 }
 @Component({
   selector: 'app-financial',
