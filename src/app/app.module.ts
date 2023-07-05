@@ -14,7 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { FinancialComponent } from './financial/financial.component';
 import { SideDialogComponent } from './side-dialog/side-dialog.component';
-import { NgxPermissionsModule } from 'ngx-permissions';
+// import { NgxPermissionsModule } from 'ngx-permissions';
 import { CommonModule } from '@angular/common';
 import { AddPropertyComponent } from './add-property/add-property.component';
 import {MatChipInputEvent, MatChipsModule} from '@angular/material/chips';
@@ -45,7 +45,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatDialogModule,
     MatTableModule,
-    NgxPermissionsModule.forRoot(),
+    // NgxPermissionsModule.forRoot(),
     CommonModule,
     MatFormFieldModule,
     MatChipsModule,

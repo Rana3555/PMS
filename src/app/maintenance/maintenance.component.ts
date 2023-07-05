@@ -17,7 +17,7 @@ export class MaintenanceComponent {
   }
 
   maintenance() {
-    this.http.get<any[]>('./assets/Json/maintenance.json').subscribe((data) => {
+    this.http.get<any[]>('./assets/Json/maintenance.json').subscribe((data:any) => {
       this.maintain = data;
     });
   }
