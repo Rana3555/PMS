@@ -6,6 +6,7 @@ import { TenantsComponent } from './tenants/tenants.component';
 import { FinancialComponent } from './financial/financial.component';
 import { MaintenanceComponent } from './maintenance/maintenance.component';
 import { AddPropertyComponent } from './add-property/add-property.component';
+import { WorkflowComponent } from './workflow/workflow.component';
 
 const routes: Routes = [
   { path: '', component:DashboardComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'tenants',component:TenantsComponent },
   { path: 'financial',component:FinancialComponent },
   { path: 'maintenance', component:MaintenanceComponent },
-  { path: 'add-property', component:AddPropertyComponent }
+  { path: 'add-property', component:AddPropertyComponent },
+  { path: 'workflow', component:WorkflowComponent }
   
 ];
 
