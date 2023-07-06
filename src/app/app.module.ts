@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PropertyManagementComponent } from './property-management/property-management.component';
 import { TenantsComponent } from './tenants/tenants.component';
@@ -23,6 +21,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MaintanceDialogComponent } from './maintance-dialog/maintance-dialog.component';
 import { PropertyDialogComponent } from './property-dialog/property-dialog.component';
 import { WorkflowComponent } from './workflow/workflow.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { WorkflowComponent } from './workflow/workflow.component';
     CommonModule,
     MatFormFieldModule,
     MatChipsModule,
-    MatIconModule
+    MatIconModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],
