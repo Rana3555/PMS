@@ -68,12 +68,15 @@
     <div class="col-md-6">
       <div class="card-body box shadow image-body">
         <div class="p-5">
-          <label class="image-card">
-            <img [src]="url" class="image-card">
-            <input type="file" id="fileInput" (change)="onSelectFile($event)" style="display: none;">
-          </label>
+          <div class="image-card">
+            <div *ngIf="selectedImage" class="image-preview">
+              <img [src]="selectedImage" alt="Preview Image" class="image-card">
+            </div>
+          </div>
           <div class="my-3" style="text-align: center ;">
-            <button type="file" class="add-btn"><span class="add">+</span></button>
+            <label class="add-btn">
+              <input type="file" (change)="handleFileInput($event)" style="display: none;">
+              <img class="plus-image" src="../../assets/plus.png" alt=""> </label>
           </div>
         </div>
       </div>
