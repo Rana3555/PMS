@@ -1,4 +1,6 @@
-<div class="bg-dark"><app-navbar></app-navbar></div>
+<div class="bg-dark">
+  <app-navbar></app-navbar>
+</div>
 <!-- Add Property -->
 <div class="container-fluid p-5">
   <a href="" class="text-name">Property Management / Add Property</a>
@@ -66,31 +68,21 @@
     <div class="col-md-6">
       <div class="card-body box shadow image-body">
         <div class="p-5">
-          <!-- <img src="../../assets/house-imgs (7).png" class="image-card" alt=""> -->
-          <!-- <img [src]="url" class="image-card">
-                        <div class="choose-file">
-                        <input class="upload-img"  type="file" (change)="onSelectFile($event)" >
-                        </div> -->
-
           <label class="image-card">
             <img [src]="url" class="image-card">
-
-            <!-- <img class="edit-icon" src="../assets/images/edit-icon.svg"> -->
             <input type="file" id="fileInput" (change)="onSelectFile($event)" style="display: none;">
           </label>
           <div class="my-3" style="text-align: center ;">
             <button type="file" class="add-btn"><span class="add">+</span></button>
           </div>
-
-
         </div>
       </div>
     </div>
     <div class="col-md-6">
       <div class="">
         <label for="exampleFormControlTextarea1" class="form-label">Places Nearby</label>
-        <div class="content-wrapper" rows="3">
-          <mat-form-field class="chip-list">
+        <div>
+          <mat-form-field class="chip-list content-wrapper" rows="3">
             <mat-chip-grid #chipList>
               <mat-chip *ngFor="let Place of Places" [removable]="removable" (removed)="remove(Place)">
                 {{Place.name}}
@@ -112,4 +104,3 @@
     </div>
   </div>
 </div>
-
