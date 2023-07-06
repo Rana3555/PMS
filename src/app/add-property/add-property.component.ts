@@ -45,9 +45,10 @@ export class AddPropertyComponent {
   addOnBlur = true;
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
   Places: Place[] = [
-    { name: 'hyd' },
-    { name: 'vij' },
-    { name: 'rjy' },
+    { name: 'Hyderabad' },
+    { name: 'Vijayawada' },
+    { name: 'Rajamadry' },
+    { name: 'Visakhapatnam' },
   ];
 
   add(event: MatChipInputEvent): void {
