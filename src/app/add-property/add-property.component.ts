@@ -1,4 +1,5 @@
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatChipInputEvent } from '@angular/material/chips';
 
@@ -11,20 +12,9 @@ export interface Place {
   styleUrls: ['./add-property.component.scss']
 })
 export class AddPropertyComponent {
+  selectedImage: string | ArrayBuffer | null = null;
+  fileToUpload: File | null = null;
 
-  profileImage: string | null = null;
-    url = '../../assets/house-imgs (7).png';
-  onSelectFile(event:any) {
-    if (event.target.files && event.target.files[0]) {
-      var reader = new FileReader();
-
-      reader.readAsDataURL(event.target.files[0]);
-      reader.onload = (event: any) => {
-        console.log(event);
-        this.url = event.target.result;
-      }
-    }
-  }
   visible = true;
   selectable = true;
   removable = true;
@@ -59,4 +49,17 @@ export class AddPropertyComponent {
       this.Places.splice(index, 1);
     }
   }
+
+
+  handleFileInput(event: any) {
+    this.fileToUpload = event.target.files.item(0);
+    if (this.fileToUpload) {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.selectedImage = e.target.result;
+      };
+      reader.readAsDataURL(this.fileToUpload);
+    }
+  }
 }
+
