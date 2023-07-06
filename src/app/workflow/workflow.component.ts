@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './workflow.component.html',
   styleUrls: ['./workflow.component.scss']
 })
+
 export class WorkflowComponent  implements OnInit {
   basicinfoDiv : boolean = true;
   personalinfoDiv : boolean = false;
@@ -14,13 +16,17 @@ export class WorkflowComponent  implements OnInit {
   paymentDiv : boolean = false;
   ReferralsDiv : boolean = false;
   othersDiv : boolean = false;
-  constructor() {
-  
-   }
+  finance: any;
+
+
+  constructor(private http: HttpClient) {   }
 
   ngOnInit(): void {
-   console.log('My Profile')
+   console.log('My Profile');
+   this.financial();
+
   }
+
   basicinfo(){
     this. basicinfoDiv = true;
     this. personalinfoDiv = false;
@@ -86,5 +92,12 @@ export class WorkflowComponent  implements OnInit {
   // copyMessage(text: string) {
   //   navigator.clipboard.writeText(text).then().catch(e => console.log(e));
   // }
-  
+
+  financial() {
+    this.http.get<any[]>('./assets/Json/property-dash.json').subscribe((data) => {
+      this.finance = data;
+    });
+  }
+
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
 }
