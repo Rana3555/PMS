@@ -24,6 +24,7 @@ import { WorkflowComponent } from './workflow/workflow.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgChartjsModule } from 'ng-chartjs';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { BrowserModule } from '@angular/platform-browser';
     MatFormFieldModule,
     MatChipsModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgChartjsModule,
 
   ],
   providers: [],

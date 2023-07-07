@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Chart } from 'chart.js';
 
 @Component({
   selector: 'app-workflow',
@@ -19,6 +20,7 @@ export class WorkflowComponent  implements OnInit {
   finance: any;
 
 
+
   constructor(private http: HttpClient) {   }
 
   ngOnInit(): void {
@@ -26,6 +28,78 @@ export class WorkflowComponent  implements OnInit {
    this.financial();
 
   }
+
+  // chart implementation
+
+  ngAfterViewInit() {
+    let data: any,
+      options: any,
+      chart: any,
+      ctx: any = document.getElementById('areaChart') as HTMLElement;
+
+    // JSON:
+    // Uncomment below and import * as data from 'json-path.json'.
+    // Or Angular 14, create anonymous JSON array and fetch with http
+    // constructor(private _http; HttpClient) {} ...
+    // Replace datasets with dataArray
+
+    // for (let key in chartData.items) {
+    //   if (chartData.items.hasOwnProperty(key)) {
+    //     this.dataArray.push(chartData.items[key]);
+    //   }
+    // }
+
+    data = {
+      labels: ['House', '', '','','','','','',''],
+      datasets: [
+        {
+          label: 'House',
+          data: [0, 50, 35, 60, 30, 70, 30, 80, 100],
+          backgroundColor: 'rgba(40,125,200,.5)',
+          borderColor: 'rgb(40,100,200)',
+          fill: true,
+          lineTension: 0.5,
+          radius: 5,
+        },
+        // {
+        //   label: 'Oranges',
+        //   data: [0, 50, 45, 100],
+        //   backgroundColor: 'rgba(75,10,125,.5)',
+        //   borderColor: 'rgb(75,10,125)',
+        //   fill: true,
+        //   lineTension: 0.2,
+        //   radius: 5,
+        // },
+      ],
+    };
+
+    options = {
+      responsive: true,
+      maintainAspectRatio: false,
+      title: {
+        display: true,
+        position: 'top',
+        text: 'House',
+        fontSize: 12,
+        fontColor: '#666',
+      },
+      legend: {
+        display: true,
+        position: 'bottom',
+        labels: {
+          fontColor: '#999',
+          fontSize: 14,
+        },
+      },
+    };
+
+    chart = new Chart(ctx, {
+      type: 'line',
+      data: data,
+      options: options,
+    });
+  }
+
 
   basicinfo(){
     this. basicinfoDiv = true;
@@ -55,8 +129,6 @@ export class WorkflowComponent  implements OnInit {
     this.earningsDiv = false;
     this.activityDiv = false;
     this.paymentDiv  = false;
-    this.ReferralsDiv = false;
-    this.othersDiv = false;
   }
   earnings(){
     this.basicinfoDiv = false;
@@ -65,8 +137,6 @@ export class WorkflowComponent  implements OnInit {
     this.earningsDiv = true;
     this.activityDiv = false;
     this.paymentDiv = false;
-    this.ReferralsDiv = false;
-    this.othersDiv = false;
   }
   activity(){
     this.basicinfoDiv = false;
@@ -75,8 +145,6 @@ export class WorkflowComponent  implements OnInit {
     this.earningsDiv= false;
     this.activityDiv = true;
     this.paymentDiv  = false;
-    this.ReferralsDiv = false;
-    this.othersDiv = false;
   }
   payment(){
     this.basicinfoDiv = false;
@@ -85,8 +153,6 @@ export class WorkflowComponent  implements OnInit {
     this.earningsDiv = false;
     this.activityDiv = false;
     this.paymentDiv= true;
-    this.ReferralsDiv = false;
-    this.othersDiv = false;
   }
 
   // copyMessage(text: string) {
