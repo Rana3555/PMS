@@ -17,7 +17,7 @@ export class WorkflowComponent  implements OnInit {
   paymentDiv : boolean = false;
   ReferralsDiv : boolean = false;
   othersDiv : boolean = false;
-  finance: any;
+  currency: any;
   // name = '!!!';
   viewMode = 'tab1';
 
@@ -159,12 +159,13 @@ export class WorkflowComponent  implements OnInit {
   }
 
  
+ 
+
   financial() {
-    this.http.get<any[]>('./assets/Json/property-dash.json').subscribe((data) => {
-      this.finance = data;
+    this.http.get<any>('./assets/Json/property-dash.json').subscribe((data) => {
+      this.currency = data.currency;
     });
   }
-
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
 
 

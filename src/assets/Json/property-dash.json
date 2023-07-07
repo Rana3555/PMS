@@ -1,28 +1,33 @@
-[
-
+{
+  "currency" : [
     {
-      "position": "112",
-      "name": "4517 Washington Ave. Manchester, Kentucky 39495",
-      "weight": 2548631,
-      "symbol": "$-1200/-"
+      "imageManage": "../../assets/property-imgs (1).png",
+      "address": "4517 Washington Ave. Manchester, Kentucky 39495",
+      "currentStatus": "Occupied",
+      "rent": "$-20,000/month",
+      "date": "February 11, 2014"
     },
     {
-      "position": "May 29, 2017",
-      "name": "4517 Washington Ave. Manchester, Kentucky 39495",
-      "weight": 2548631,
-      "symbol": "$-1200/-"
+      "imageManage": "../../assets/property-imgs (2).png",
+      "address": "4517 Washington Ave. Manchester, Kentucky 39495",
+      "currentStatus": "Occupied",
+      "rent": "$-20,000/month",
+      "date": "February 11, 2014"
     },
     {
-      "position": "November 28, 2015",
-      "name": "Savannah Nguyen",
-      "weight": 2548631,
-      "symbol": "$-1200/-"
+      "imageManage": "../../assets/property-imgs (3).png",
+      "address": "4517 Washington Ave. Manchester, Kentucky 39495",
+      "currentStatus": "Occupied",
+      "rent": "$-20,000/month",
+      "date": "February 11, 2014"
     },
     {
-      "position": "December 2, 2018",
-      "name": "Cameron Williamson",
-      "weight": 2548631,
-      "symbol": "$-1200/-"
+      "imageManage": "../../assets/property-imgs (4).png",
+      "address": "4517 Washington Ave. Manchester, Kentucky 39495",
+      "currentStatus": "Occupied",
+      "rent": "$-20,000/month",
+      "date": "February 11, 2014"
     }
+
   ]
-  
+}

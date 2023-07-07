@@ -167,19 +167,18 @@
                                     <div class="border-none">
                                         <div>
                                             <div class="mx-2">
-                                                <div class="header-action-phone card-bg py-3 my-3 px-3">
+                                                <div class="header-action-phone card-bg py-3 my-3 px-3" *ngFor="let item of currency">
                                                     <div class="icon me-4">
                                                         <img [alt]="" tabindex="0" src="../../assets/house-imgs (1).png"
                                                             class="w-100" height="105">
                                                     </div>
                                                     <div class="phone">
                                                         <P>Address</P>
-                                                        <span class="name">4517 Washington Ave. Manchester, Kentucky
-                                                            39495</span>
+                                                        <span class="name">{{ item.currentStatus}}</span>
                                                     </div>
                                                     <div class="phone">
                                                         <p>Current Status</p>
-                                                        <span class="name">Occupied</span>
+                                                        <span class="name">{{item.currentStatus}}</span>
                                                     </div>
                                                     <div class="phone">
                                                         <p>Rent</p>
