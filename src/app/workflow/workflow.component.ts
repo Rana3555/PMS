@@ -18,7 +18,8 @@ export class WorkflowComponent  implements OnInit {
   ReferralsDiv : boolean = false;
   othersDiv : boolean = false;
   finance: any;
-
+  // name = '!!!';
+  viewMode = 'tab1';
 
 
   constructor(private http: HttpClient) {   }
@@ -109,7 +110,6 @@ export class WorkflowComponent  implements OnInit {
     this.activityDiv = false;
     this.paymentDiv  = false;
     this.ReferralsDiv = false;
-    this.othersDiv = false;
    
   }
   personalinfo(){
@@ -120,7 +120,6 @@ export class WorkflowComponent  implements OnInit {
     this.activityDiv = false;
     this.paymentDiv  = false;
     this.ReferralsDiv = false;
-    this.othersDiv = false;
   }
   professionalinfo(){
     this.basicinfoDiv = false;
@@ -129,6 +128,7 @@ export class WorkflowComponent  implements OnInit {
     this.earningsDiv = false;
     this.activityDiv = false;
     this.paymentDiv  = false;
+    this.ReferralsDiv = false;
   }
   earnings(){
     this.basicinfoDiv = false;
@@ -137,6 +137,7 @@ export class WorkflowComponent  implements OnInit {
     this.earningsDiv = true;
     this.activityDiv = false;
     this.paymentDiv = false;
+    this.ReferralsDiv = false;
   }
   activity(){
     this.basicinfoDiv = false;
@@ -145,6 +146,7 @@ export class WorkflowComponent  implements OnInit {
     this.earningsDiv= false;
     this.activityDiv = true;
     this.paymentDiv  = false;
+    this.ReferralsDiv = false;
   }
   payment(){
     this.basicinfoDiv = false;
@@ -153,12 +155,10 @@ export class WorkflowComponent  implements OnInit {
     this.earningsDiv = false;
     this.activityDiv = false;
     this.paymentDiv= true;
+    this.ReferralsDiv = false;
   }
 
-  // copyMessage(text: string) {
-  //   navigator.clipboard.writeText(text).then().catch(e => console.log(e));
-  // }
-
+ 
   financial() {
     this.http.get<any[]>('./assets/Json/property-dash.json').subscribe((data) => {
       this.finance = data;
@@ -166,4 +166,7 @@ export class WorkflowComponent  implements OnInit {
   }
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+
+
+  
 }
