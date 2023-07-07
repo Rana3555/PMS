@@ -24,6 +24,7 @@ import { WorkflowComponent } from './workflow/workflow.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { ImageUploadComponent } from './image-upload/image-upload.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { BrowserModule } from '@angular/platform-browser';
     MaintanceDialogComponent,
     PropertyDialogComponent,
     WorkflowComponent,
+    ImageUploadComponent,
 
   ],
   imports: [

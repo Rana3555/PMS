@@ -1,7 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component,Input  } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PropertyDialogComponent } from '../property-dialog/property-dialog.component';
+import { Property } from '../model/property.model';
+import { ActivatedRoute } from '@angular/router';
+import { PropertyService } from '../property.service';
 
 @Component({
   selector: 'app-property-management',
@@ -9,37 +12,41 @@ import { PropertyDialogComponent } from '../property-dialog/property-dialog.comp
   styleUrls: ['./property-management.component.scss']
 })
 export class PropertyManagementComponent {
-  // property: any;
-  property: any[] = [];
+  @Input() property!: Property;
+
+  // properties: any;
+  properties: any[] = [];
 
   filterOptions: any;
 
-  constructor(private dialog: MatDialog, private http: HttpClient) {}
+  constructor(private dialog: MatDialog, private http: HttpClient, private route: ActivatedRoute, private propertyService: PropertyService) {}
 
   ngOnInit() {
     this.management();
+    this.property = history.state.property;
+    this.property = this.propertyService.property || { propertyName: '', status: '', streetName: '', state: '', description: '', propertyType: '', rent: 0, city: '', zipCode: '', maintenanceHistory: '', image: null, places: [] };
   }
 
   management() {
     this.http.get<any>('./assets/Json/management.json').subscribe((data) => {
-      this.property = data.management;
+      this.properties = data.management;
       this.filterOptions = {
         statusOptions: data.statusOptions,
         propertyTypeOptions: data.propertyTypeOptions
       };
     });
   }
-  userDialog(propertyId: number) {
-    const property = this.property.find(p => p.id === propertyId);
-    if (property) {
+  userDialog(propertiesId: number) {
+    const properties = this.properties.find(p => p.id === propertiesId);
+    if (properties) {
       const dialogRef = this.dialog.open(PropertyDialogComponent, {
         width: '25%',
         height: '100%',
         position: { right: '0' },
         data: {
-          id: property.id,
-          imagePath: property.imagePath,
-          name: property.name
+          id: properties.id,
+          imagePath: properties.imagePath,
+          name: properties.name
         },
       });
       dialogRef.afterClosed().subscribe((res:any) => {
