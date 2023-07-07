@@ -1,14 +1,14 @@
-  <div class="container">
+  <div class="container p-4">
     <div class="row">
       <div class="navbar-image p-3">
         <img [src]="data?.imagePath" class="img-size w-100" alt="Selected Property Image">
       </div>
       <hr style="height:2px;border-width:0;color:#0c0b0b;background-color:#030303">
       <div class="navbar-name mb-3">
-        <h5>{{ data?.name }}</h5>
+        <p class="text-name">{{ data?.name }}</p>
       </div>
       <div class="nav-address">
-        <h5>Address:</h5>
+        <p class="text-name">Address:</p>
         <p class="text-name">4517 Washington Ave. Manchester, Kentucky 39495</p>
       </div>
       <div class="status mb-3">
@@ -17,26 +17,26 @@
       </div>
       <div class="row mb-3">
         <div class="col-md-6">
-          <h5>Rent:</h5>
+          <p class="text-name">Rent:</p>
           <span class="text-name">$-1200/-</span>
         </div>
         <div class="col-md-6">
-          <h5>Outstanding Payment</h5>
+          <p class="text-name">Outstanding Payment</p>
           <span>Nill</span>
         </div>
       </div>
       <div class="row mb-4">
         <div class="col-md-6">
-          <h5>Tenant Details:</h5>
+          <p class="text-name">Tenant Details:</p>
           <span>Kathryn Murphy tanya.hill@example.com (225) 555-0118</span>
         </div>
         <div class="col-md-6">
-          <h5>Lease Details:</h5>
+          <p class="text-name">Lease Details:</p>
           <span>August 9, 2023 - August 8, 2025</span>
         </div>
       </div>
       <div class="navbar-maintenance ">
-        <h5>Maintenance Request:</h5>
+        <p class="text-name">Maintenance Request:</p>
         <span>Nill</span>
       </div>
     </div>

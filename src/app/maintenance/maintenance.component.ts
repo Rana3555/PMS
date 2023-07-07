@@ -28,7 +28,7 @@ export class MaintenanceComponent {
     const property = this.maintain.find(p => p.id === propertyId);
     if (property) {
       const dialogRef = this.dialog.open(MaintanceDialogComponent, {
-        width: '30%',
+        width: '25%',
         height: '100%',
         position: { right: '0' },
         data: {
