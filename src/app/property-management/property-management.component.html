@@ -9,23 +9,25 @@
         <div class="mx-3">
           <select class="sel-option">
             <option value="Status">Status</option>
-            <option *ngFor="let option of filterOptions.statusOptions" [value]="option.value">{{ option.label }}</option>
+            <option *ngFor="let option of filterOptions.statusOptions" [value]="option.value">{{ option.label }}
+            </option>
           </select>
         </div>
         <div class="mx-3">
           <select class="sel-option">
-            <option value="Property type">Property type</option>
-            <option *ngFor="let option of filterOptions.propertyTypeOptions" [value]="option.value">{{ option.label }}</option>
+            <option value="property type">property type</option>
+            <option *ngFor="let option of filterOptions.propertyTypeOptions" [value]="option.value">{{ option.label }}
+            </option>
           </select>
         </div>
       </div>
     </div>
     <div class="col-md-6 text-end mb-3">
-      <button type="button" class="add-propert-btn" routerLink="/add-property">Add Property</button>
+      <button type="button" class="add-propert-btn" routerLink="/add-property">Add property</button>
     </div>
   </div>
   <div class="row my-3">
-    <div class="col" *ngFor="let management of property">
+    <div class="col" *ngFor="let management of properties">
       <div class="card" style="width: 250px;" (click)="userDialog(management.id)">
         <img [src]="management.imagePath" class="card-img-top" alt="...">
         <div class="card-body">
@@ -39,6 +41,27 @@
           <p class="card-title">{{ management.lease }}</p>
           <span>{{ management.date }}</span>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row my-3">
+  <div class="col" *ngFor="let management of properties">
+    <div class="card" style="width: 250px;" (click)="userDialog(management.id)" *ngIf="property">
+      <img [src]="property.image" alt="Property Image" *ngIf="property.image">
+      <div class="card-body">
+        <p><strong>Property Name:</strong> {{ property.propertyName }}</p>
+        <p><strong>Status:</strong> {{ property.status }}</p>
+        <p><strong>Street Name:</strong> {{ property.streetName }}</p>
+        <p><strong>State:</strong> {{ property.state }}</p>
+        <p><strong>Description:</strong> {{ property.description }}</p>
+        <p><strong>Property Type:</strong> {{ property.propertyType }}</p>
+        <p><strong>Rent per month:</strong> {{ property.rent }}</p>
+        <p><strong>City:</strong> {{ property.city }}</p>
+        <p><strong>ZIP Code:</strong> {{ property.zipCode }}</p>
+        <p><strong>Maintenance History:</strong> {{ property.maintenanceHistory }}</p>
+        <p *ngIf="property.places.length > 0"><strong>Places Nearby:</strong> {{ property.places.join(', ') }}</p>
       </div>
     </div>
   </div>

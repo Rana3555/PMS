@@ -28,6 +28,6 @@ export class FinancialComponent {
     });
   }
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','icon'];
   // dataSource = this.financial;
 }

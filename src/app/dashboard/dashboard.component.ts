@@ -19,7 +19,7 @@ export class DashboardComponent {
   }
 
   loadProperties() {
-    this.http.get<any>('./assets/Json/dashboard-properties.json').subscribe((data) => {
+    this.http.get<any>('./assets/Json/dashboard-properties.json').subscribe((data:any) => {
       this.properties = data.statusOptions;
       this.currency = data.currency;
     });
@@ -29,7 +29,7 @@ export class DashboardComponent {
     const property = this.properties.find(p => p.id === propertyId);
     if (property) {
       const dialogRef = this.dialog.open(SideDialogComponent, {
-        width: '30%',
+        width: '25%',
         height: '100%',
         position: { right: '0' },
         data: {

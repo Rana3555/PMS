@@ -1,0 +1,75 @@
+.side-nav{
+    font-size: 17px;
+    font-weight: 500;
+    color: black;
+}
+.nav-item{
+    padding: 15px;
+    cursor: pointer;
+}
+.total-card{
+    height: 430px;
+    width: 100%;
+}
+.charts {
+    max-width: 100%;
+    height: 350px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  
+  .sel-option{
+    width: 200px;
+    height: 25px;
+}
+.card-title{
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    cursor: pointer;
+}
+// .img-size{
+//    height: 103px;
+//    width: 103px;
+// }
+// 
+.header-action-phone {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    top: 1px;
+}
+
+ .phone {
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 3px;
+    line-height: 1.6;
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+ }
+.name {
+    font-family: "Roboto";
+    font-size: 16px;
+    display: block;
+    line-height: 1.3;
+    color: black;
+    width: 238px;
+    font-weight: 400;
+}
+.card-bg{
+    background: #fff;
+    justify-content: space-evenly;
+}
+::ng-deep .mat-mdc-tab-group.mat-mdc-tab-group-stretch-tabs>.mat-mdc-tab-header .mat-mdc-tab
+{
+  max-width: 250px;
+  font-size: 16px;
+  font-weight: 700;
+}

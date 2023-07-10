@@ -1,0 +1,406 @@
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div role="search" class="col-auto col-md-3 col-xl-2 px-sm-2 px-0" style="width: 300px">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="p-3"> <img src="../../assets/home-icon.png" alt=""></span>
+                </a>
+                <div class="sidemenu-details mt-5">
+                    <div class="nav-item">
+                        <li class="sidenav" (click)="basicinfo()"><img class="Dashboard"
+                                src="../../assets/dashboard-icon.png"><span class="side-nav ms-1">Dashboard</span></li>
+                    </div>
+                    <div class="nav-item">
+                        <li class="sidenav" (click)="personalinfo()"><img class="Property"
+                                src="../../assets/property-icon.png"><span class="side-nav ms-1">Property
+                                Management</span></li>
+                    </div>
+                    <div class="nav-item">
+                        <li class="sidenav" (click)="professionalinfo()"><img class="Tenants"
+                                src="../../assets/tenants.png"><span class="side-nav ms-1">Tenants</span></li>
+                    </div>
+                    <div class="nav-item">
+                        <li class="sidenav" (click)="earnings()"><img class="Maintenance"
+                                src="../../assets/maintenance-icon.png"><span class="side-nav ms-1">Maintenance</span>
+                        </li>
+                    </div>
+                    <div class="nav-item">
+                        <li class="sidenav" (click)="activity()"><img class="Financials"
+                                src="../../assets/reports-icon.png"><span class="side-nav ms-1">Financials</span></li>
+                    </div>
+                    <div class="nav-item">
+                        <li class="sidenav" (click)="payment()"><img class="Reports"
+                                src="../../assets/reports-icon.png"><span class="side-nav ms-1">Reports</span> </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="background: #F1F1F1;">
+            <div class="container-fluid px-3 pt-2 pb-5">
+                <div class="d-flex justify-content-between pb-2">
+                    <div class="">
+                        <h2 class="mb-2">Dashboard</h2>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="me-2">
+                            <input placeholder="Search" formControlName="Search" type="text" class="form-control" />
+                        </div>
+                        <p class="side-nav">Eleanor Pena</p>
+                    </div>
+                </div>
+                <div *ngIf="basicinfoDiv">
+                    <div class="container-fluid">
+                        <div class="row mb-3">
+                            <div class="col-md-3">
+                                <div class="card total-card box shadow">
+                                    <div class="text-center my-3">
+                                        <p class="side-nav">Total no. of proterities</p>
+                                        <canvas id="doughnutChart" height="150px"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card total-card box shadow">
+                                    <div class="p-3">
+                                        <p class="side-nav">Rental Income</p>
+                                        <div class="charts">
+                                            <canvas id="areaChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="side-nav">Property Management</p>
+                        <div class="col-lg-12 order-lg-last col-md-12">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="border-none">
+                                            <div>
+                                                <div class="mx-2">
+                                                    <div class="header-action-phone card-bg py-3 my-3 px-3"
+                                                        *ngFor="let item of propertyManagement">
+                                                        <div class="icon me-4">
+                                                            <img [alt]="" tabindex="0" [src]="item.imageManage"
+                                                                class="w-100" height="105">
+                                                        </div>
+                                                        <div class="phone">
+                                                            <P>Address</P>
+                                                            <span class="name">{{ item.address}}</span>
+                                                        </div>
+                                                        <div class="phone">
+                                                            <p>Current Status</p>
+                                                            <span class="name"
+                                                                style="color: red;">{{item.currentStatus}}</span>
+                                                        </div>
+                                                        <div class="phone">
+                                                            <p>Rent</p>
+                                                            <span class="name">{{item.rent}}</span>
+                                                        </div>
+                                                        <div class="phone">
+                                                            <p>Lease End Date</p>
+                                                            <span class="name">February 11, 2014</span>
+                                                        </div>
+                                                        <div class="phone">
+                                                            <button mat-icon-button>
+                                                                <mat-icon class="vert-ellipse">more_vert</mat-icon>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- property management -->
+            <div *ngIf="personalinfoDiv">
+                Property Management
+                <div class="container-fluid">
+                    <div class="filter d-flex">
+                        <p>Filter as: </p>
+                        <div class="mx-3">
+                            <select class="sel-option">
+                                <option value="Status">Location</option>
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="mx-3">
+                            <select class="sel-option">
+                                <option value="Property type">Status</option>
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="mx-3">
+                            <select class="sel-option">
+                                <option value="Property type">Price</option>
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- about -->
+                    <div class="title-head my-3">
+                        <div class="d-flex justify-content-between">
+                            <p>About 2000 Results</p>
+                            <a class="card-title">+ Add Property</a>
+                        </div>
+                    </div>
+                    <!-- GRID DATA -->
+
+                    <div class="col-lg-12 order-lg-last col-md-12">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="border-none">
+                                        <div>
+                                            <div class="mx-2">
+                                                <div class="header-action-phone card-bg py-3 my-3 px-3"
+                                                    *ngFor="let item of propertyManagement">
+                                                    <div class="icon me-4">
+                                                        <img [alt]="" tabindex="0" [src]="item.imageManage"
+                                                            class="w-100" height="105">
+                                                    </div>
+                                                    <div class="phone">
+                                                        <P>Address</P>
+                                                        <span class="name">{{ item.address}}</span>
+                                                    </div>
+                                                    <div class="phone">
+                                                        <p>Current Status</p>
+                                                        <span class="name"
+                                                            style="color: red;">{{item.currentStatus}}</span>
+                                                    </div>
+                                                    <div class="phone">
+                                                        <p>Rent</p>
+                                                        <span class="name">{{item.rent}}</span>
+                                                    </div>
+                                                    <div class="phone">
+                                                        <p>Lease End Date</p>
+                                                        <span class="name">February 11, 2014</span>
+                                                    </div>
+                                                    <div class="phone">
+                                                        <button mat-icon-button>
+                                                            <mat-icon class="vert-ellipse">more_vert</mat-icon>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- tenents -->
+            <div *ngIf="professionalinfoDiv">
+                Tenants
+                <div class="container-fluid">
+                    <div class="filter d-flex">
+                        <p>Filter as: </p>
+                        <div class="mx-3">
+                            <select class="sel-option">
+                                <option value="Status">Outstanding payment</option>
+                                <option>sdsd</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- about -->
+                    <div class="title-head my-3">
+                        <div class="d-flex justify-content-between">
+                            <p>About 2000 Results</p>
+                            <a class="card-title">+ Add Property</a>
+                        </div>
+                    </div>
+                    <!-- GRID DATA -->
+
+                    <div class="col-lg-12 order-lg-last col-md-12">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="border-none">
+                                        <div>
+                                            <div class="mx-2">
+                                                <div class="header-action-phone card-bg py-3 my-3 px-3"
+                                                    *ngFor="let data of tenantsDashboard">
+                                                    <div class="icon me-4">
+                                                        <img [alt]="" tabindex="0" [src]="data.imageTenants"
+                                                            class="w-100" height="105">
+                                                    </div>
+                                                    <div class="phone">
+                                                        <P>Name</P>
+                                                        <span class="name">{{data.name}}</span>
+                                                    </div>
+                                                    <div class="phone">
+                                                        <p>Contact</p>
+                                                        <span class="name">{{data.contact}} </span>
+                                                    </div>
+                                                    <div class="phone">
+                                                        <p>Lease Details</p>
+                                                        <span class="name">{{data.LeaseDetails}}</span>
+                                                    </div>
+                                                    <div class="phone">
+                                                        <p>Outstanding payment</p>
+                                                        <span class="name"
+                                                            style="color: green;">{{data.Outstanding}}</span>
+                                                    </div>
+                                                    <div class="phone">
+                                                        <button mat-icon-button>
+                                                            <mat-icon class="vert-ellipse">more_vert</mat-icon>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="earningsDiv">
+                Maintenance
+                <div class="container-fluid">
+                    <div class="container-fluid">
+                        <div class="filter d-flex">
+                            <p>Filter as: </p>
+                            <div class="mx-3">
+                                <select class="sel-option">
+                                    <option value="Status">Outstanding payment</option>
+                                    <option>sdsd</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- about -->
+                        <div class="title-head my-3">
+                            <div class="d-flex justify-content-between">
+                                <p>About 2000 Results</p>
+                                <a class="card-title">+ Add Property</a>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <mat-tab-group >
+                                <!-- first tab -->
+                                <mat-tab label="Maintenance Requests"> 
+                                    <div class="tab py-3 my-3">
+                                        <div class="row ">
+                                            <div class="col p-2" *ngFor="let test of maintanceRequest">
+                                                <div class="card box shadow p-4" style="width: 450px;" >
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="heading">
+                                                            <p class="phone">{{test.title}}</p>
+                                                            <p>{{test.subTitle}}</p>
+                                                            <p>{{test.name}}</p>
+                                                        </div>
+                                                        <div class="date">
+                                                            <p>{{test.date}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="priority">
+                                                        <p class="phone">Priority Level</p>
+                                                        <span style="color: red;">{{test.priority}}</span>
+                                                    </div>
+                                                    <div class="priority">
+                                                        <p class="phone">Status</p>
+                                                        <span>{{test.status}}</span>
+                                                    </div>
+                                                    <div class="priority">
+                                                        <p class="phone">Staff Member</p>
+                                                        <span>{{test.staffMember}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                </mat-tab>
+                                <!-- second tab -->
+                                <mat-tab label="Assigned Tasks"> 
+                                    <div class="col-lg-12 order-lg-last col-md-12">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="row">
+                                                    <div class="border-none">
+                                                        <div>
+                                                            <div class="mx-2">
+                                                                <div class="header-action-phone card-bg py-3 my-3 px-3"  *ngFor="let task of assignTask">
+                                                                    <div class="icon me-4">
+                                                                        <img [alt]="" tabindex="0"
+                                                                            [src]="task.assignedImage" class="w-85"
+                                                                            height="85">
+                                                                    </div>
+                                                                    <div class="phone">
+                                                                        <P>{{task.userName}}</P>
+                                                                    </div>
+                                                                    <div class="phone">
+                                                                        <p>Task</p>
+                                                                        <span class="name">{{task.tasks}} </span>
+                                                                    </div>
+                                                                    <div class="phone">
+                                                                        <p>Due Date</p>
+                                                                        <span class="name">{{task.dueDate}}</span>
+                                                                    </div>
+                                                                    <div class="phone">
+                                                                        <p>Priority</p>
+                                                                        <span class="name" style="color: red;">{{task.property}}</span>
+                                                                    </div>
+                                                                    <div class="phone">
+                                                                        <p>Status</p>
+                                                                        <span class="name">{{task.status}}</span>
+                                                                    </div>
+                                                                    <div class="phone">
+                                                                        <button mat-icon-button>
+                                                                            <mat-icon class="vert-ellipse">more_vert</mat-icon>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                </mat-tab>
+                                <!-- <mat-tab label="Third"> Content 3 </mat-tab> -->
+                              </mat-tab-group>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="activityDiv">
+                payment
+            </div>
+            <div *ngIf="paymentDiv">
+                Reports
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- pagination: STRAT -->
+    <!-- <div class="d-flex justify-content-between pt-2 px-1">
+                <div>
+                  <div class="d-flex justify-content-start">
+                    <span class="d-flex align-items-center me-2">Records per page:</span>
+                    <select class="form-select px-1" aria-label="Default select example" style="width: 68px" >
+                      <option [ngValue]="10">10</option>
+                      <option [ngValue]="25">25</option>
+                      <option [ngValue]="50">50</option>
+                      <option [ngValue]="100">100</option>
+                    </select>
+                  </div>
+                </div>
+               
+              </div> -->
