@@ -78,32 +78,33 @@
                                         <div class="border-none">
                                             <div>
                                                 <div class="mx-2">
-                                                    <div class="header-action-phone card-bg py-3 my-3 px-3">
+                                                    <div class="header-action-phone card-bg py-3 my-3 px-3"
+                                                        *ngFor="let item of propertyManagement">
                                                         <div class="icon me-4">
-                                                            <img [alt]="" tabindex="0"
-                                                                src="../../assets/house-imgs (1).png" class="w-100"
-                                                                height="105">
+                                                            <img [alt]="" tabindex="0" [src]="item.imageManage"
+                                                                class="w-100" height="105">
                                                         </div>
                                                         <div class="phone">
                                                             <P>Address</P>
-                                                            <span class="name">4517 Washington Ave. Manchester, Kentucky
-                                                                39495</span>
+                                                            <span class="name">{{ item.address}}</span>
                                                         </div>
                                                         <div class="phone">
                                                             <p>Current Status</p>
-                                                            <span class="name">Occupied</span>
+                                                            <span class="name"
+                                                                style="color: red;">{{item.currentStatus}}</span>
                                                         </div>
                                                         <div class="phone">
                                                             <p>Rent</p>
-                                                            <span class="name">$-20,000/month</span>
+                                                            <span class="name">{{item.rent}}</span>
                                                         </div>
                                                         <div class="phone">
                                                             <p>Lease End Date</p>
                                                             <span class="name">February 11, 2014</span>
                                                         </div>
                                                         <div class="phone">
-                                                            <p>:</p>
-                                                            <span class="name"></span>
+                                                            <button mat-icon-button>
+                                                                <mat-icon class="vert-ellipse">more_vert</mat-icon>
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -292,29 +293,29 @@
                                 <mat-tab label="Maintenance Requests"> 
                                     <div class="tab py-3 my-3">
                                         <div class="row ">
-                                            <div class="col">
-                                                <div class="card box shadow p-4" style="width: 450px;">
+                                            <div class="col p-2" *ngFor="let test of maintanceRequest">
+                                                <div class="card box shadow p-4" style="width: 450px;" >
                                                     <div class="d-flex justify-content-between">
                                                         <div class="heading">
-                                                            <p class="phone">Maintenance Request</p>
-                                                            <p>Cracked tile in the bathroom</p>
-                                                            <p>Jacob Jones</p>
+                                                            <p class="phone">{{test.title}}</p>
+                                                            <p>{{test.subTitle}}</p>
+                                                            <p>{{test.name}}</p>
                                                         </div>
                                                         <div class="date">
-                                                            <p>May 12, 2019</p>
+                                                            <p>{{test.date}}</p>
                                                         </div>
                                                     </div>
                                                     <div class="priority">
                                                         <p class="phone">Priority Level</p>
-                                                        <span>High</span>
+                                                        <span style="color: red;">{{test.priority}}</span>
                                                     </div>
                                                     <div class="priority">
                                                         <p class="phone">Status</p>
-                                                        <span>Staff Assigned</span>
+                                                        <span>{{test.status}}</span>
                                                     </div>
                                                     <div class="priority">
                                                         <p class="phone">Staff Member</p>
-                                                        <span>Guy Hawkins</span>
+                                                        <span>{{test.staffMember}}</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -330,32 +331,35 @@
                                                     <div class="border-none">
                                                         <div>
                                                             <div class="mx-2">
-                                                                <div class="header-action-phone card-bg py-3 my-3 px-3">
+                                                                <div class="header-action-phone card-bg py-3 my-3 px-3"  *ngFor="let task of assignTask">
                                                                     <div class="icon me-4">
                                                                         <img [alt]="" tabindex="0"
-                                                                            src="../../assets/assign-task.png" class="w-100"
+                                                                            [src]="task.assignedImage" class="w-100"
                                                                             height="105">
                                                                     </div>
                                                                     <div class="phone">
-                                                                        <P>Name</P>
-                                                                        <span class="name">Jacob Jones</span>
+                                                                        <P>{{task.userName}}</P>
                                                                     </div>
                                                                     <div class="phone">
-                                                                        <p>Contact</p>
-                                                                        <span class="name">+91 9557896412 </span>
+                                                                        <p>Task</p>
+                                                                        <span class="name">{{task.tasks}} </span>
                                                                     </div>
                                                                     <div class="phone">
-                                                                        <p>Lease Details</p>
-                                                                        <span class="name">August 9, 2023 - August 8,
-                                                                            2025</span>
+                                                                        <p>Due Date</p>
+                                                                        <span class="name">{{task.dueDate}}</span>
                                                                     </div>
                                                                     <div class="phone">
-                                                                        <p>Outstanding payment</p>
-                                                                        <span class="name">None</span>
+                                                                        <p>Priority</p>
+                                                                        <span class="name" style="color: red;">{{task.property}}</span>
                                                                     </div>
                                                                     <div class="phone">
-                                                                        <p>:</p>
-                                                                        <span class="name"></span>
+                                                                        <p>Status</p>
+                                                                        <span class="name">{{task.status}}</span>
+                                                                    </div>
+                                                                    <div class="phone">
+                                                                        <button mat-icon-button>
+                                                                            <mat-icon class="vert-ellipse">more_vert</mat-icon>
+                                                                        </button>
                                                                     </div>
                                                                 </div>
                                                             </div>

@@ -18,9 +18,9 @@ export class WorkflowComponent  implements OnInit {
   ReferralsDiv : boolean = false;
   othersDiv : boolean = false;
   propertyManagement: any;
-  
-  // name = '!!!';
   tenantsDashboard: any;
+  maintanceRequest: any;
+  assignTask: any;
 
 
   constructor(private http: HttpClient) {   }
@@ -28,7 +28,7 @@ export class WorkflowComponent  implements OnInit {
   ngOnInit(): void {
    console.log('My Profile');
    this.property();
-   this.tenants();
+  
 
   }
 
@@ -39,7 +39,6 @@ export class WorkflowComponent  implements OnInit {
       options: any,
       chart: any,
       ctx: any = document.getElementById('areaChart') as HTMLElement;
-
     // JSON:
     // Uncomment below and import * as data from 'json-path.json'.
     // Or Angular 14, create anonymous JSON array and fetch with http
@@ -192,14 +191,13 @@ export class WorkflowComponent  implements OnInit {
   property() {
     this.http.get<any>('./assets/Json/property-dash.json').subscribe((data:any) => {
       this.propertyManagement = data.propertyManagement;
+      this.maintanceRequest = data.maintanceRequest;
+      this.tenantsDashboard = data.tenantsDashboard;
+      this.assignTask = data.assignTask;
     });
   }
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol',];
+  // displayedColumns: string[] = ['position', 'name', 'weight', 'symbol',];
 
-  tenants(){
-    this.http.get<any>('./assets/Json/property-dash.json').subscribe((data:any) =>{
-      this.tenantsDashboard = data.tenantsDashboard
-    })
-  }
+
   
 }

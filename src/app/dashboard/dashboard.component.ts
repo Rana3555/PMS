@@ -19,7 +19,7 @@ export class DashboardComponent {
   }
 
   loadProperties() {
-    this.http.get<any>('./assets/Json/dashboard-properties.json').subscribe((data) => {
+    this.http.get<any>('./assets/Json/dashboard-properties.json').subscribe((data:any) => {
       this.properties = data.statusOptions;
       this.currency = data.currency;
     });

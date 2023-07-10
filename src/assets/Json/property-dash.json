@@ -80,5 +80,111 @@
       "LeaseDetails": "August 9, 2023 - August 8, 2025",
       "Outstanding": "None"
     }
+  ],
+  "maintanceRequest" : [
+    {
+      "title": "Maintenance Request",
+      "subTitle": "Cracked tile in the bathroom",
+      "name": "Jacob Jones",
+      "date": "February 11, 2023",
+      "priority": "High",
+      "status": "Staff Assigned",
+      "staffMember": "Staff Member"
+    },
+    {
+      "title": "Maintenance Request",
+      "subTitle": "Cracked tile in the bathroom",
+      "name": "Jacob Jones",
+      "date": "September 24, 2017",
+      "priority": "High",
+      "status": "Staff Assigned",
+      "staffMember": "Staff Member"
+    },
+    {
+      "title": "Maintenance Request",
+      "subTitle": "Cracked tile in the bathroom",
+      "name": "Jacob Jones",
+      "date": "February 11, 2020",
+      "priority": "High",
+      "status": "Staff Assigned",
+      "staffMember": "Staff Member"
+    },
+    {
+      "title": "Maintenance Request",
+      "subTitle": "Cracked tile in the bathroom",
+      "name": "Jacob Jones",
+      "date": "February 9, 2015",
+      "priority": "High",
+      "status": "Staff Assigned",
+      "staffMember": "Staff Member"
+    },
+    {
+      "title": "Maintenance Request",
+      "subTitle": "Cracked tile in the bathroom",
+      "name": "Jacob Jones",
+      "date": "February 11, 2023",
+      "priority": "High",
+      "status": "Staff Assigned",
+      "staffMember": "Staff Member"
+    },
+    {
+      "title": "Maintenance Request",
+      "subTitle": "Cracked tile in the bathroom",
+      "name": "Jacob Jones",
+      "date": "September 24, 2017",
+      "priority": "High",
+      "status": "Staff Assigned",
+      "staffMember": "Staff Member"
+    }
+  ],
+  "assignTask":[
+    {
+      "assignedImage": "../../assets/assign-task.png",
+      "userName": "Cameron Williamson",
+      "tasks": "Cracked tile in the bathroom ",
+      "dueDate":"November 28, 2015",
+      "property":"High",
+      "status": "Ordered Required Materials"
+    },
+    {
+      "assignedImage": "../../assets/assign-task.png",
+      "userName": "Cameron Williamson",
+      "tasks": "Cracked tile in the bathroom ",
+      "dueDate":"November 28, 2015",
+      "property":"High",
+      "status": "Ordered Required Materials"
+    },
+    {
+      "assignedImage": "../../assets/assign-task.png",
+      "userName": "Cameron Williamson",
+      "tasks": "Cracked tile in the bathroom ",
+      "dueDate":"November 28, 2015",
+      "property":"High",
+      "status": "Ordered Required Materials"
+    },
+    {
+      "assignedImage": "../../assets/assign-task.png",
+      "userName": "Cameron Williamson",
+      "tasks": "Cracked tile in the bathroom ",
+      "dueDate":"November 28, 2015",
+      "property":"High",
+      "status": "Ordered Required Materials"
+    },
+    {
+      "assignedImage": "../../assets/assign-task.png",
+      "userName": "Cameron Williamson",
+      "tasks": "Cracked tile in the bathroom ",
+      "dueDate":"November 28, 2015",
+      "property":"High",
+      "status": "Ordered Required Materials"
+    },
+    {
+      "assignedImage": "../../assets/assign-task.png",
+      "userName": "Cameron Williamson",
+      "tasks": "Cracked tile in the bathroom ",
+      "dueDate":"November 28, 2015",
+      "property":"High",
+      "status": "Ordered Required Materials"
+    }
   ]
 }

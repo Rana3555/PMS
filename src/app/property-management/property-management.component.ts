@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component,Input  } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PropertyDialogComponent } from '../property-dialog/property-dialog.component';
 import { Property } from '../model/property.model';
@@ -19,7 +19,7 @@ export class PropertyManagementComponent {
 
   filterOptions: any;
 
-  constructor(private dialog: MatDialog, private http: HttpClient, private route: ActivatedRoute, private propertyService: PropertyService) {}
+  constructor(private dialog: MatDialog, private http: HttpClient, private route: ActivatedRoute, private propertyService: PropertyService) { }
 
   ngOnInit() {
     this.management();
@@ -28,7 +28,7 @@ export class PropertyManagementComponent {
   }
 
   management() {
-    this.http.get<any>('./assets/Json/management.json').subscribe((data) => {
+    this.http.get<any>('./assets/Json/management.json').subscribe((data:any) => {
       this.properties = data.management;
       this.filterOptions = {
         statusOptions: data.statusOptions,
@@ -49,7 +49,7 @@ export class PropertyManagementComponent {
           name: properties.name
         },
       });
-      dialogRef.afterClosed().subscribe((res:any) => {
+      dialogRef.afterClosed().subscribe((res: any) => {
         // Handle dialog close event
       });
     }
