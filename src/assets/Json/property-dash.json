@@ -1,5 +1,5 @@
 {
-  "currency" : [
+  "propertyManagement" : [
     {
       "imageManage": "../../assets/property-imgs (1).png",
       "address": "4517 Washington Ave. Manchester, Kentucky 39495",
@@ -11,23 +11,74 @@
       "imageManage": "../../assets/property-imgs (2).png",
       "address": "4517 Washington Ave. Manchester, Kentucky 39495",
       "currentStatus": "Occupied",
-      "rent": "$-20,000/month",
-      "date": "February 11, 2014"
+      "rent": "$-19,000/month",
+      "date": "September 24, 2017"
     },
     {
       "imageManage": "../../assets/property-imgs (3).png",
       "address": "4517 Washington Ave. Manchester, Kentucky 39495",
       "currentStatus": "Occupied",
+      "rent": "$-25,000/month",
+      "date": "February 9, 2015"
+    },
+    {
+      "imageManage": "../../assets/property-imgs (5).png",
+      "address": "4517 Washington Ave. Manchester, Kentucky 39495",
+      "currentStatus": "Occupied",
       "rent": "$-20,000/month",
-      "date": "February 11, 2014"
+      "date": "February 11, 2020"
     },
     {
       "imageManage": "../../assets/property-imgs (4).png",
       "address": "4517 Washington Ave. Manchester, Kentucky 39495",
       "currentStatus": "Occupied",
       "rent": "$-20,000/month",
-      "date": "February 11, 2014"
+      "date": "February 11, 2023"
     }
 
+  ],
+  "tenantsDashboard":[
+    {
+      "imageTenants": "../../assets/tenets (7).png",
+      "name": "Jacob Jones",
+      "contact": "+91 9557896412 ",
+      "LeaseDetails": "August 9, 2023 - August 8, 2025",
+      "Outstanding": "None"
+    },
+    {
+      "imageTenants": "../../assets/tenets (8).png",
+      "name": "Jacob Jones",
+      "contact": "+91 9557896412 ",
+      "LeaseDetails": "August 9, 2023 - August 8, 2025",
+      "Outstanding": "None"
+    },
+    {
+      "imageTenants": "../../assets/tenets (5).png",
+      "name": "Jacob Jones",
+      "contact": "+91 9557896412 ",
+      "LeaseDetails": "August 9, 2023 - August 8, 2025",
+      "Outstanding": "None"
+    },
+    {
+      "imageTenants": "../../assets/tenets (3).png",
+      "name": "Jacob Jones",
+      "contact": "+91 9557896412 ",
+      "LeaseDetails": "August 9, 2023 - August 8, 2025",
+      "Outstanding": "None"
+    },
+    {
+      "imageTenants": "../../assets/tenets (6).png",
+      "name": "Jacob Jones",
+      "contact": "+91 9557896412 ",
+      "LeaseDetails": "August 9, 2023 - August 8, 2025",
+      "Outstanding": "None"
+    },
+    {
+      "imageTenants": "../../assets/tenets (1).png",
+      "name": "Jacob Jones",
+      "contact": "+91 9557896412 ",
+      "LeaseDetails": "August 9, 2023 - August 8, 2025",
+      "Outstanding": "None"
+    }
   ]
 }

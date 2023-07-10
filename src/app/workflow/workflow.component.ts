@@ -17,16 +17,18 @@ export class WorkflowComponent  implements OnInit {
   paymentDiv : boolean = false;
   ReferralsDiv : boolean = false;
   othersDiv : boolean = false;
-  currency: any;
+  propertyManagement: any;
+  
   // name = '!!!';
-  viewMode = 'tab1';
+  tenantsDashboard: any;
 
 
   constructor(private http: HttpClient) {   }
 
   ngOnInit(): void {
    console.log('My Profile');
-   this.financial();
+   this.property();
+   this.tenants();
 
   }
 
@@ -110,6 +112,7 @@ export class WorkflowComponent  implements OnInit {
     this.activityDiv = false;
     this.paymentDiv  = false;
     this.ReferralsDiv = false;
+    this.othersDiv = false;
    
   }
   personalinfo(){
@@ -120,6 +123,7 @@ export class WorkflowComponent  implements OnInit {
     this.activityDiv = false;
     this.paymentDiv  = false;
     this.ReferralsDiv = false;
+    this.othersDiv = false;
   }
   professionalinfo(){
     this.basicinfoDiv = false;
@@ -129,6 +133,7 @@ export class WorkflowComponent  implements OnInit {
     this.activityDiv = false;
     this.paymentDiv  = false;
     this.ReferralsDiv = false;
+    this.othersDiv = false;
   }
   earnings(){
     this.basicinfoDiv = false;
@@ -138,6 +143,7 @@ export class WorkflowComponent  implements OnInit {
     this.activityDiv = false;
     this.paymentDiv = false;
     this.ReferralsDiv = false;
+    this.othersDiv = false;
   }
   activity(){
     this.basicinfoDiv = false;
@@ -147,6 +153,7 @@ export class WorkflowComponent  implements OnInit {
     this.activityDiv = true;
     this.paymentDiv  = false;
     this.ReferralsDiv = false;
+    this.othersDiv = false;
   }
   payment(){
     this.basicinfoDiv = false;
@@ -156,18 +163,43 @@ export class WorkflowComponent  implements OnInit {
     this.activityDiv = false;
     this.paymentDiv= true;
     this.ReferralsDiv = false;
+    this.othersDiv = false;
+  }
+  Referrals(){
+    this.basicinfoDiv = false;
+    this.personalinfoDiv = false;
+    this.professionalinfoDiv= false;
+    this.earningsDiv = false;
+    this.activityDiv = false;
+    this.paymentDiv = false;
+    this.ReferralsDiv = true;
+    this.othersDiv = false;
+  }
+  others(){
+    this.basicinfoDiv = false;
+    this.personalinfoDiv = false;
+    this.professionalinfoDiv = false;
+    this.earningsDiv = false;
+    this.activityDiv = false;
+    this.paymentDiv = false;
+    this.ReferralsDiv = false;
+    this.othersDiv = true;
   }
 
  
  
 
-  financial() {
-    this.http.get<any>('./assets/Json/property-dash.json').subscribe((data) => {
-      this.currency = data.currency;
+  property() {
+    this.http.get<any>('./assets/Json/property-dash.json').subscribe((data:any) => {
+      this.propertyManagement = data.propertyManagement;
     });
   }
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol',];
 
-
+  tenants(){
+    this.http.get<any>('./assets/Json/property-dash.json').subscribe((data:any) =>{
+      this.tenantsDashboard = data.tenantsDashboard
+    })
+  }
   
 }

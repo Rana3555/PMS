@@ -25,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgChartjsModule } from 'ng-chartjs';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { NgChartjsModule } from 'ng-chartjs';
     MatIconModule,
     BrowserAnimationsModule,
     NgChartjsModule,
+    MatTabsModule,
 
   ],
   providers: [],
