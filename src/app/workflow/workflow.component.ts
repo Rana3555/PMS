@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 
 @Component({
@@ -8,7 +8,7 @@ import { Chart } from 'chart.js';
   styleUrls: ['./workflow.component.scss']
 })
 
-export class WorkflowComponent  implements OnInit {
+export class WorkflowComponent  implements OnInit,AfterViewInit  {
   basicinfoDiv : boolean = true;
   personalinfoDiv : boolean = false;
   professionalinfoDiv : boolean = false;
@@ -21,6 +21,7 @@ export class WorkflowComponent  implements OnInit {
   tenantsDashboard: any;
   maintanceRequest: any;
   assignTask: any;
+  doughnutChart: any;
 
 
   constructor(private http: HttpClient) {   }
@@ -28,29 +29,17 @@ export class WorkflowComponent  implements OnInit {
   ngOnInit(): void {
    console.log('My Profile');
    this.property();
-  
-
   }
 
   // chart implementation
 
   ngAfterViewInit() {
+    this.createDoughnutChart();
     let data: any,
       options: any,
       chart: any,
       ctx: any = document.getElementById('areaChart') as HTMLElement;
-    // JSON:
-    // Uncomment below and import * as data from 'json-path.json'.
-    // Or Angular 14, create anonymous JSON array and fetch with http
-    // constructor(private _http; HttpClient) {} ...
-    // Replace datasets with dataArray
-
-    // for (let key in chartData.items) {
-    //   if (chartData.items.hasOwnProperty(key)) {
-    //     this.dataArray.push(chartData.items[key]);
-    //   }
-    // }
-
+   
     data = {
       labels: ['House', '', '','','','','','',''],
       datasets: [
@@ -101,6 +90,25 @@ export class WorkflowComponent  implements OnInit {
       options: options,
     });
   }
+
+// doughnutchart 
+createDoughnutChart() {
+  const ctx = document.getElementById('doughnutChart') as HTMLCanvasElement;
+  const doughnutChart = new Chart(ctx, {
+    type: 'doughnut',
+
+  data: {
+    labels: ['Occupied', 'Vacant'],
+    datasets: [{
+      data: [60, 30 ], // Example data values
+      backgroundColor: ['#064ACB','#E3E3E3']
+    }]
+  },
+  options: {
+    // Chart options go here
+  }
+});
+}
 
 
   basicinfo(){
@@ -198,6 +206,4 @@ export class WorkflowComponent  implements OnInit {
   }
   // displayedColumns: string[] = ['position', 'name', 'weight', 'symbol',];
 
-
-  
 }
