@@ -100,3 +100,8 @@
   padding: 30px;
 
 }
+.ng-invalid.ng-touched,
+.ng-invalid.ng-dirty,
+.form-submitted .ng-invalid {
+  border-color: red;
+}

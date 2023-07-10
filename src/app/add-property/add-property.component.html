@@ -2,19 +2,21 @@
   <app-navbar></app-navbar>
 </div>
 <!-- Add Property -->
-<div class="container-fluid p-5">
+<div class="container-fluid p-5" [formGroup]="propertyForm">
   <div class="d-flex">
-    <p class="text-property" routerLink="/property-management">Property Management</p> <span class="text-name"> / Add Property</span>
+    <p class="text-property" routerLink="/property-management">Property Management</p> <span class="text-name"> / Add
+      Property</span>
   </div>
   <div class="row mt-4">
     <div class="col-md-3">
       <div class="">
         <label for="exampleFormControlInput1" class="form-label">Property Name</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Property Name">
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Property Name"
+          formControlName="propertyName">
       </div>
       <div class="mt-3">
         <label for="exampleFormControlInput1" class="form-label">Status</label>
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" aria-label="Default select example" formControlName="status">
           <option selected>Status</option>
           <option value="1">One</option>
           <option value="2">Two</option>
@@ -26,21 +28,24 @@
       </div>
       <div class="">
         <label for="exampleFormControlInput1" class="form-label">Street Name</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Street Name">
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Street Name"
+          formControlName="streetName">
       </div>
       <div class="mt-3">
         <label for="exampleFormControlInput1" class="form-label">State</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="State">
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="State"
+          formControlName="state">
       </div>
       <div class="mt-3">
         <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description"
+          formControlName="description"></textarea>
       </div>
     </div>
     <div class="col-md-3">
       <div class="">
         <label for="exampleFormControlInput1" class="form-label">Property Type</label>
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" aria-label="Default select example" formControlName="propertyType">
           <option selected>Property Type</option>
           <option value="1">One</option>
           <option value="2">Two</option>
@@ -49,22 +54,24 @@
       </div>
       <div class="mt-3">
         <label for="exampleFormControlInput1" class="form-label">Rent per month</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Rent">
+        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Rent"
+          formControlName="rent">
       </div>
       <div class="mt-5"></div>
       <div class="">
         <label for="exampleFormControlInput1" class="form-label">City</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="City">
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="City" formControlName="city">
       </div>
       <div class="mt-3">
         <label for="exampleFormControlInput1" class="form-label">ZIP Code</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ZIP Code">
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="ZIP Code"
+          formControlName="zipCode">
       </div>
       <div class="mt-3">
         <label for="exampleFormControlTextarea1" class="form-label">Maintenance History</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description"
+          formControlName="maintenanceHistory"></textarea>
       </div>
-
     </div>
 
     <div class="col-md-6">
@@ -104,8 +111,11 @@
     <div class="col-md-6 my-4">
       <div class="text-center">
         <button type="button" class="cancel-btn mx-4">cancel</button>
-        <button type="button" class="add-propert-btn">Add</button>
+        <button type="button" class="add-propert-btn" (click)="addProperty()">Add</button>
+        <div *ngIf="propertyForm.invalid && formSubmitted" class="text-danger">Please fill in all required fields.</div>
       </div>
     </div>
   </div>
 </div>
+
+
