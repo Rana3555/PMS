@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { PropertyManagementComponent } from './property-management/property-management.component';
 import { TenantsComponent } from './tenants/tenants.component';
 import { MaintenanceComponent } from './maintenance/maintenance.component';
@@ -27,6 +27,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ImageUploadComponent } from './image-upload/image-upload.component';
 import { NgChartjsModule } from 'ng-chartjs';
 import { MatTabsModule } from '@angular/material/tabs';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { LoadingInterceptor } from './loading/loading.interceptor';
 
 
 @NgModule({
@@ -44,6 +46,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     PropertyDialogComponent,
     WorkflowComponent,
     ImageUploadComponent,
+    SpinnerComponent,
 
   ],
   imports: [
@@ -65,7 +68,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatTabsModule,
 
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
+  }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
