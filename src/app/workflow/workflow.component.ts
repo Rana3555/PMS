@@ -2,6 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 
+export interface PeriodicElement {
+  name: string;
+  position: number;
+  weight: number;
+  symbol: string;
+  imgicon: any;
+}
 @Component({
   selector: 'app-workflow',
   templateUrl: './workflow.component.html',
@@ -22,13 +29,14 @@ export class WorkflowComponent  implements OnInit,AfterViewInit  {
   maintanceRequest: any;
   assignTask: any;
   doughnutChart: any;
-
+  finance: any;
 
   constructor(private http: HttpClient) {   }
 
   ngOnInit(): void {
    console.log('My Profile');
    this.property();
+   this.finacialList();
   }
 
   // chart implementation
@@ -197,13 +205,22 @@ createDoughnutChart() {
  
 
   property() {
-    this.http.get<any>('./assets/Json/property-dash.json').subscribe((data:any) => {
+    this.http.get<any>('./assets/Json/property-dash.json',).subscribe((data:any) => {
       this.propertyManagement = data.propertyManagement;
       this.maintanceRequest = data.maintanceRequest;
       this.tenantsDashboard = data.tenantsDashboard;
       this.assignTask = data.assignTask;
     });
   }
-  // displayedColumns: string[] = ['position', 'name', 'weight', 'symbol',];
 
-}
+  finacialList(){
+    this.http.get<any[]>('./assets/Json/financial-table.json').subscribe((data) => {
+      this.finance = data;
+    });
+    }
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol',];
+
+
+  }
+
+
