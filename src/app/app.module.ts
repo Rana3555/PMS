@@ -29,6 +29,8 @@ import { NgChartjsModule } from 'ng-chartjs';
 import { MatTabsModule } from '@angular/material/tabs';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { LoadingInterceptor } from './loading/loading.interceptor';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -47,6 +49,8 @@ import { LoadingInterceptor } from './loading/loading.interceptor';
     WorkflowComponent,
     ImageUploadComponent,
     SpinnerComponent,
+    LoginComponent,
+    RegisterComponent,
 
   ],
   imports: [

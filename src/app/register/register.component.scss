@@ -1,0 +1,44 @@
+.banner-color{
+    // background-color: #28BA62;
+    background-image: url(../../assets/main-banner-img.png);
+    height: 930px;
+    width: 100%;
+   
+}
+.login-card{
+    margin-top: 100px;
+    position: relative;
+}
+.card{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 500px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    background: #f1f1f1;
+  }
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  .login-button{
+    background-color: #4663F9;
+    color: #FFF;
+    border-radius: 5px;
+    width: 180px;
+    height: 38px;
+    border: none;
+    font-weight: 500;
+  }
+  .card-header{
+    
+  }

@@ -45,7 +45,15 @@
                         <div class="me-2">
                             <input placeholder="Search" formControlName="Search" type="text" class="form-control" />
                         </div>
-                        <p class="side-nav">Eleanor Pena</p>
+                        <div class="dropdown">
+                            <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <p class="side-nav">Eleanor Pena</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                              <!-- <li><a class="dropdown-item" href="" routerLink="/workflow">Sign-in</a></li> -->
+                              <li><a class="dropdown-item" href="#"routerLink="/" >Sign-out</a></li>
+                            </ul>
+                          </div>
                     </div>
                 </div>
                 <div *ngIf="basicinfoDiv">
@@ -122,7 +130,7 @@
 
             <!-- property management -->
             <div *ngIf="personalinfoDiv">
-                Property Management
+                <p class="side-nav">Property Management</p>
                 <div class="container-fluid">
                     <div class="filter d-flex">
                         <p>Filter as: </p>
@@ -202,7 +210,7 @@
 
             <!-- tenents -->
             <div *ngIf="professionalinfoDiv">
-                Tenants
+                <p class="side-nav">Tenants</p>
                 <div class="container-fluid">
                     <div class="filter d-flex">
                         <p>Filter as: </p>
@@ -268,7 +276,7 @@
                 </div>
             </div>
             <div *ngIf="earningsDiv">
-                Maintenance
+                <p class="side-nav">Maintenance</p>              
                 <div class="container-fluid">
                     <div class="container-fluid">
                         <div class="filter d-flex">
