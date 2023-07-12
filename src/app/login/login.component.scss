@@ -1,12 +1,17 @@
 .banner-color{
     // background-color: #28BA62;
     background-image: url(../../assets/main-banner-img.png);
-    height: 930px;
+    height: 820px;
     width: 100%;
-   
+}
+.side-nav{
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+  text-align: center;
 }
 .login-card{
-    margin-top: 250px;
+    margin-top: 150px;
     position: relative;
 }
 .card{

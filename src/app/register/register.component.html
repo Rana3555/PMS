@@ -1,3 +1,4 @@
+<div class="bg-dark"><app-navbar></app-navbar></div>
 <div class="container-fluid p-0">
     <div class="banner-color">
         <div class="container">
@@ -8,6 +9,7 @@
                                 <div class="text-center"><img src="../../assets/home-icon.png" alt=""></div>
                             </div>
                             <div class="card-body">
+                                <p class="side-nav"><u>Register Here</u></p>
                                 <form [formGroup]="RegisterForm" (ngSubmit)="onRegister()" class="was-validated">
                                     <div class="mb-2">
                                         <label for="name"><b>Full Name</b></label>
