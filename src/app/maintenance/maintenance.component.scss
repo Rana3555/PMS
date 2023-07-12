@@ -22,3 +22,9 @@
   font-size: 32px;
   font-weight: 700
 }
+
+@media screen and (min-width: 768px) and (max-width: 1048px) {
+  .col{
+      padding: 1rem;
+  }
+}

@@ -6,3 +6,30 @@
   color: #FFF;
   padding: 15px;
 }
+
+@media screen and (min-width: 600px) {
+  .nav {
+    /* Apply some styles */
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1048px) {
+  // .navbar-expand-lg {
+  //   // flex-wrap: nowrap;
+  //   // justify-content: flex-start;
+  //   // margin-left: -172px;
+  //   padding: 0;
+  // }
+  .nav-link{
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .nav-brand-img{
+    height: 2.15rem;
+    width: 10rem;
+  }
+ 
+  .nav-end{
+
+  }
+}
