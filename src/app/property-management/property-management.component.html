@@ -1,11 +1,11 @@
 <div class="bg-dark">
   <app-navbar></app-navbar>
 </div>
-<div class="container-fluid p-5">
+<div class="container-fluid p-3">
   <div class="row">
     <div class="col-md-6">
       <div class="d-flex">
-        <p>Filter as: </p>
+        <p class="">Filter as: </p>
         <div class="mx-3">
           <select class="sel-option">
             <option value="Status">Status</option>
@@ -26,9 +26,9 @@
       <button type="button" class="add-propert-btn" routerLink="/add-property">Add property</button>
     </div>
   </div>
-  <div class="row my-3">
+  <div class="row ">
     <div class="col" *ngFor="let management of properties">
-      <div class="card" style="width: 250px;" (click)="userDialog(management.id)">
+      <div class="card"(click)="userDialog(management.id)">
         <img [src]="management.imagePath" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-title">{{ management.name }}</p>
@@ -48,7 +48,7 @@
 
 <div class="row my-3">
   <div class="col" *ngFor="let management of properties">
-    <div class="card" style="width: 250px;" (click)="userDialog(management.id)" *ngIf="property">
+    <div class="card"  (click)="userDialog(management.id)" *ngIf="property">
       <img [src]="property.image" alt="Property Image" *ngIf="property.image">
       <div class="card-body">
         <p><strong>Property Name:</strong> {{ property.propertyName }}</p>

@@ -118,11 +118,17 @@ table {
   }
   
   @media screen and (min-width: 768px) and (max-width: 1048px) {
-    .col-auto{
-      width: 200px;
+    // .col-auto{
+    //   width: 200px;
+    // }
+    .row{
+      width: fit-content;
     }
     .nav-brand-img{
       height: 2.15rem;
       width: 10rem;
+    }
+    .col{
+      
     }
 }
