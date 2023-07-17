@@ -31,6 +31,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { LoadingInterceptor } from './loading/loading.interceptor';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { SharedModule } from './shared/shared.module';
+import { MaterialModule } from './shared/material/material.module';
 
 
 @NgModule({
@@ -59,17 +61,13 @@ import { RegisterComponent } from './register/register.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatTableModule,
     // NgxPermissionsModule.forRoot(),
     CommonModule,
-    MatFormFieldModule,
-    MatChipsModule,
-    MatIconModule,
     BrowserAnimationsModule,
     NgChartjsModule,
     MatTabsModule,
+    SharedModule,
+    MaterialModule
 
   ],
   providers: [{
