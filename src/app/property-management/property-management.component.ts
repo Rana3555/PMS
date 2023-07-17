@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { PropertyDialogComponent } from '../property-dialog/property-dialog.component';
 import { Property } from '../model/property.model';
 import { ActivatedRoute } from '@angular/router';
-import { PropertyService } from '../property.service';
+import { PropertyService } from '../Services/property/property.service';
 
 @Component({
   selector: 'app-property-management',
