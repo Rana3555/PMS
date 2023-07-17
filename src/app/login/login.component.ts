@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
       return;
     }
     if (this.loginFrom.valid) {
-      this.router.navigate(['/workflow']);
+      this.router.navigate(['/admin']);
     }
   }
 

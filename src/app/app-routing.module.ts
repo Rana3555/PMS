@@ -10,6 +10,9 @@ import { WorkflowComponent } from './workflow/workflow.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
+import { UserTypeGuard } from './user-type.guard'; // Import the UserTypeGuard
+
+
 const routes: Routes = [
   { path: '', component:DashboardComponent },
   { path: 'property-management',component:PropertyManagementComponent },
@@ -19,9 +22,19 @@ const routes: Routes = [
   { path: 'add-property', component:AddPropertyComponent },
   { path: 'workflow', component:WorkflowComponent },
   { path: 'login', component:LoginComponent },
-  { path: 'register', component: RegisterComponent }
-  
+  { path: 'register', component: RegisterComponent },
+  {
+    path: 'admin',
+    canActivate: [UserTypeGuard], // Apply the guard to the admin route
+    loadChildren: () => import('./admin/admin.module').then((m) => m.AdminModule)
+  },
+  {
+    path: 'user',
+    canActivate: [UserTypeGuard], // Apply the guard to the user route
+    loadChildren: () => import('./user/user.module').then((m) => m.UserModule)
+  },
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
