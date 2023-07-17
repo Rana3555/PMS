@@ -5,7 +5,7 @@ import { MatChipInputEvent } from '@angular/material/chips';
 import { FormBuilder, FormGroup, Validators,FormControl  } from '@angular/forms';
 import { Property } from '../model/property.model';
 import { Router } from '@angular/router';
-import { PropertyService } from '../property.service';
+import { PropertyService } from '../Services/propertyServices/property.service';
 
 export interface Place {
   name: string;
