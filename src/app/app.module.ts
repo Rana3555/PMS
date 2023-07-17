@@ -28,7 +28,7 @@ import { ImageUploadComponent } from './image-upload/image-upload.component';
 import { NgChartjsModule } from 'ng-chartjs';
 import { MatTabsModule } from '@angular/material/tabs';
 import { SpinnerComponent } from './spinner/spinner.component';
-import { LoadingInterceptor } from './loading/loading.interceptor';
+import { LoadingInterceptor } from './loadingInterceptors/loading.interceptor';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SharedModule } from './shared/shared.module';
