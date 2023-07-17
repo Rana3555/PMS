@@ -1,12 +1,20 @@
-<nav class="navbar navbar-expand-sm  navbar-light"  >
-  <div class="container-fluid">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid nav-left">
+    <!-- Navbar brand -->
     <a class="navbar-brand" href="#">
-      <img src="../../assets/logo-propsmart.png" alt=""></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      <img src="../../assets/logo-propsmart.png" class="nav-brand-img" alt=""></a>
+
+    <!-- Toggle button -->
+    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <!-- Collapsible wrapper -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link mx-4" aria-current="page" routerLink="">Dashboard</a>
@@ -24,25 +32,30 @@
           <a class="nav-link" href="#" routerLink="/financial">Financial</a>
         </li>
       </ul>
+      <!-- Left links -->
 
-      <div class="nav-link">
-        <a href=""><img src="../../assets/search.png" alt=""></a>
-      </div>
-      <div class="nav-link">
-        <a href=""><img src="../../assets/notification logo.png" alt=""></a>
-      </div>
-      <div class="nav-link">
-        <div class="dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="../../assets/profile-signIn.png" alt="">
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="" routerLink="/workflow">Sign-in</a></li>
-            <li><a class="dropdown-item" href="#">Sign-out</a></li>
-          </ul>
+      <div class="d-flex align-items-center nav-end">
+        <div class="nav-link px-3 me-2">
+          <a href=""><img src="../../assets/search.png" class="img" alt=""></a>
+        </div>
+        <div class="nav-link me-3">
+          <a href=""><img src="../../assets/notification logo.png" alt=""></a>
+        </div>
+        <div class="nav-link px-2">
+          <div class="dropdown">
+            <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../../assets/profile-signIn.png" alt="">
+            </a>
+            <ul class="dropdown-menu"  style="margin-left: -80px;">
+              <li><a class="dropdown-item" href="" routerLink="/login">Sign-in</a></li>
+              <li><a class="dropdown-item" href="#" routerLink="/register">Register</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-
     </div>
+    <!-- Collapsible wrapper -->
   </div>
+  <!-- Container wrapper -->
 </nav>
+<!-- Navbar -->

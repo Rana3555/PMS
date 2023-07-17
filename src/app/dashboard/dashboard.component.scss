@@ -5,15 +5,16 @@
   background-image: url('../../assets/main-banner-img.png');
 }
 
-.hidden-spacer {
-  height: 56px;
-}
+// .hidden-spacer {
+//   height: 56px;
+// }
 
 .main-heading {
   font-size: 54px;
   font-weight: 700;
   color: #FFF;
 }
+
 
 .sub-heading {
   font-size: 24px;
@@ -36,4 +37,49 @@
   font-size: 16px;
   font-weight: 500;
   color: #FF0000;
+}
+.card{
+  width: 300px;
+  height: 333px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1048px) {
+  .banner {
+    min-height: 800px;
+    // margin-right: 100%;
+  }
+  .main-heading {
+    font-size: 35px;
+    font-weight: 600;
+    color: #FFF;
+    padding: 0;
+  }
+  .sub-heading {
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFF;
+    padding: 0;
+  }
+  .number-text {
+    font-size: 35px;
+    font-weight: 600;
+    color: #FFF;
+    padding: 0;
+  }
+  .arrow-img{
+    height: 0.9rem;
+    width: 0.8rem;
+  }
+  .col{
+    // padding: 5px 0px 5px 0px;
+    padding: 0.5rem;
+  }
+  .p-5 {
+    padding: 2rem!important;
+ }
+ .card{
+  width: 160px;
+  height: 233px;
+  }
+
 }

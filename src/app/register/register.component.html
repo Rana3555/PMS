@@ -1,0 +1,77 @@
+<div class="bg-dark"><app-navbar></app-navbar></div>
+<div class="container-fluid p-0">
+    <div class="banner-color">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-lg-4 mx-auto">
+                    <div class="login-card"><div class="card">
+                            <div class="card-header">
+                                <div class="text-center"><img src="../../assets/home-icon.png" alt=""></div>
+                            </div>
+                            <div class="card-body">
+                                <p class="side-nav"><u>Register Here</u></p>
+                                <form [formGroup]="RegisterForm" (ngSubmit)="onRegister()" class="was-validated">
+                                    <div class="mb-2">
+                                        <label for="name"><b>Full Name</b></label>
+                                        <input type="text" formControlName="name" class="form-control"
+                                        placeholder="Enter Full Name" [ngClass]="{ 'is-invalid': submitted && f.name.errors}" required >
+                                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                        <div *ngIf="f.name.errors.required">Full Name is required</div>
+                                    </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="mobile-number"><b>Mobile Number</b></label>
+                                        <input  type="text" formControlName="mobilenumber" class="form-control"
+                                            placeholder="Enter Mobile Number" [ngClass]="{'is-invalid': submitted && f.mobilenumber.errors}" required>
+                                        <div *ngIf="submitted && f.mobilenumber.errors" class="invalid-feedback">
+                                            <div *ngIf="f.mobilenumber.errors.required">Password is required</div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="email"><b>Email</b></label>
+                                        <input type="text" formControlName="email" class="form-control"
+                                            placeholder="Enter Email" [ngClass]="{ 'is-invalid': submitted && f.email.errors}" required>
+                                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                            <div *ngIf="f.email.errors.required">Email is required</div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="psw"><b>Password</b></label>
+                                        <input  type="password" formControlName="password" class="form-control"
+                                            placeholder="Enter Password" [ngClass]="{'is-invalid': submitted && f.password.errors}" required>
+                                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                            <div *ngIf="f.password.errors.required">Password is required</div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="psw"><b>Confirm Password</b></label>
+                                        <input  type="password" formControlName="confirmPassword" class="form-control"
+                                            placeholder="Enter Confirm Password" [ngClass]="{'is-invalid': submitted && f.password.errors}" required>
+                                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                            <div *ngIf="f.password.errors.required">Confirm Password is required</div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                                        <label class="form-check-label" for="exampleCheck1">Accept all conditons</label>
+                                    </div>
+                                    <div class="text-center">
+                                        <button class="login-button" type="submit">Register</button>
+                                    </div>
+                                    <div class="mt-2 form-check">
+                                        <div class="d-flex justify-content-center links">
+                                            Don't have an account?<a href="#" routerLink="/login">Sign Up</a>
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <a href="#">Forgot your password?</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

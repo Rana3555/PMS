@@ -73,3 +73,62 @@
   font-size: 16px;
   font-weight: 700;
 }
+
+table {
+    width: 100%;
+  }
+  .text-name{
+    text-align-last: auto;
+    display: inline-flex;
+    gap: 55px
+  }
+  .card-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #787878;
+    ;
+  }
+  .dollar-amount{
+    font-weight: 700;
+    font-size: 40px;
+    color: #787878;
+  }
+  .table-title{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .payment-data{
+    color: #007B2A;
+    font-size: 16px;
+  }
+  .debit{
+    color: red;
+    font-size: 16px;
+  
+  }
+  .head-text{
+    font-size: 32px;
+    font-weight: 700
+  }
+  .table-head{
+    background-color:  #E8E8E8;
+  }
+  .col-auto{
+    width: 300px;
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1048px) {
+    // .col-auto{
+    //   width: 200px;
+    // }
+    .row{
+      width: fit-content;
+    }
+    .nav-brand-img{
+      height: 2.15rem;
+      width: 10rem;
+    }
+    .col{
+      
+    }
+}
