@@ -9,6 +9,7 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AdminSidenavComponent } from './admin-sidenav/admin-sidenav.component';
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../shared/material/material.module';
+import { AdminPropertyManagementComponent } from './admin-property-management/admin-property-management.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { MaterialModule } from '../shared/material/material.module';
     AdminHeaderComponent,
     AdminHomeComponent,
     AdminSidenavComponent,
+    AdminPropertyManagementComponent,
   ],
   imports: [
     CommonModule,

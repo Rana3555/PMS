@@ -17,4 +17,5 @@ export class AdminHeaderComponent implements OnInit {
   toggleSidebar() {
     this.toggleSidebarForMe.emit();
   }
-}
+
+  }
