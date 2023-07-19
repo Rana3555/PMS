@@ -33,6 +33,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './shared/material/material.module';
+import { AdminRoutingModule } from './admin/admin-routing.module';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { MaterialModule } from './shared/material/material.module';
     BrowserAnimationsModule,
     NgChartjsModule,
     SharedModule,
-    MaterialModule
+    MaterialModule,
+    AdminRoutingModule
 
   ],
   providers: [{

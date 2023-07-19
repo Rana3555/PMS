@@ -23,16 +23,18 @@ const routes: Routes = [
   { path: 'workflow', component:WorkflowComponent },
   { path: 'login', component:LoginComponent },
   { path: 'register', component: RegisterComponent },
-  {
-    path: 'admin',
-    canActivate: [UserTypeGuard], // Apply the guard to the admin route
-    loadChildren: () => import('./admin/admin.module').then((m) => m.AdminModule)
-  },
-  {
-    path: 'user',
-    canActivate: [UserTypeGuard], // Apply the guard to the user route
-    loadChildren: () => import('./user/user.module').then((m) => m.UserModule)
-  },
+  // {
+  //   path: 'admin',
+  //   canActivate: [UserTypeGuard], // Apply the guard to the admin route
+  //   loadChildren: () => import('./admin/admin.module').then((m) => m.AdminModule)
+  // },
+  // {
+  //   path: 'user',
+  //   canActivate: [UserTypeGuard], // Apply the guard to the user route
+  //   loadChildren: () => import('./user/user.module').then((m) => m.UserModule)
+  // },
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
+  { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
 ];
 
 
